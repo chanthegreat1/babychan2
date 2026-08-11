@@ -329,7 +329,7 @@
     </div>
   </div>
 
-  <script>
+    <script>
     const PAGE_SIZE = 24;
     let rawPhotos = [];
     let filteredPhotos = [];
@@ -362,6 +362,7 @@
         console.error(err);
         document.getElementById('loadingSentinel').innerText = '❌ 加载 photos.json 失败，请检查文件路径或网络连接。';
       }
+    } // <-- 修正：补上了这里缺失的闭合大括号！
 
     // 2. 构建时间（MonthKey）侧边栏项
     function buildMonthMenu() {
@@ -408,7 +409,6 @@
         // 根据侧边栏选项筛选
         switch (activeFilterType) {
           case 'all': 
-            // 改进1：只显示图片，排除视频
             matchFilter = (item.type !== 'video'); 
             break;
           case 'albums': matchFilter = (item.albums && item.albums.length > 0); break;
@@ -427,15 +427,13 @@
         return matchFilter && matchSearch;
       });
 
-      // 改进2：如果是“照片”主页，按日期从新到旧排序，并且只保留最近的 50 张照片
       if (activeFilterType === 'all') {
         matches.sort((a, b) => {
           const dateA = a.date ? new Date(a.date) : 0;
           const dateB = b.date ? new Date(b.date) : 0;
-          return dateB - dateA; // 降序，最新的在前
+          return dateB - dateA;
         });
 
-        // 如果想限制只看最近 50 张（数字可以自由修改；如果不限制数量只按时间倒序，把下面这行 .slice 删掉即可）：
         matches = matches.slice(0, 50);
       }
 
@@ -496,7 +494,7 @@
           </div>
         `;
       } else {
-        mediaHtml = `<img src="${item.url}" loading="lazy" alt="${item.title}" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x300?text=图片路径错误';">`;
+        mediaHtml = `< img src="${item.url}" loading="lazy" alt="${item.title}" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x300?text=图片路径错误';">`;
       }
 
       card.innerHTML = `
@@ -517,7 +515,7 @@
       if (item.type === 'video') {
         mediaContainer.innerHTML = `<video class="lightbox-media" src="${item.url}" controls autoplay></video>`;
       } else {
-        mediaContainer.innerHTML = `<img class="lightbox-media" src="${item.url}">`;
+        mediaContainer.innerHTML = `< img class="lightbox-media" src="${item.url}">`;
       }
 
       document.getElementById('lightboxTitle').innerText = item.title;
