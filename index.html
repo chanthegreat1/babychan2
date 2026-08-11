@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>知沛·陈的欢楽时光</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap">
+  <style>
+    :root {
+      --google-blue: #1a73e8;
+      --google-bg: #f8f9fa;
+      --sidebar-bg: #ffffff;
+      --text-primary: #202124;
+      --text-secondary: #5f6368;
+      --border-color: #e0e0e0;
+      --card-radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--google-bg);
+      color: var(--text-primary);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* 顶栏 */
+    header {
+      height: 64px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      z-index: 100;
+      flex-shrink: 0;
+    }
+
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      min-width: 200px;
+    }
+
+    .logo-icon { width: 32px; height: 32px; }
+    .logo-text { font-size: 1.2rem; font-weight: 500; color: #3c4043; }
+
+    .search-container {
+      flex: 1;
+      max-width: 600px;
+      position: relative;
+    }
+
+    .search-box {
+      width: 100%;
+      padding: 10px 16px 10px 44px;
+      background: #f1f3f4;
+      border: 1px solid transparent;
+      border-radius: 24px;
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .search-box:focus {
+      background: #fff;
+      border-color: var(--border-color);
+      box-shadow: 0 1px 6px rgba(32,33,36,0.2);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      fill: var(--text-secondary);
+      width: 20px;
+      height: 20px;
+    }
+
+    /* 主布局 */
+    .app-layout {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 64px);
+      overflow: hidden;
+    }
+
+    /* 侧边栏 Sidebar (标准 Google Photos 样式) */
+    aside {
+      width: 260px;
+      background: var(--sidebar-bg);
+      border-right: 1px solid var(--border-color);
+      overflow-y: auto;
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex-shrink: 0;
+      user-select: none;
+    }
+
+    .sidebar-section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 8px 0 4px 12px;
+    }
+
+    .sidebar-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .sidebar-btn {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      border-radius: 20px;
+      border: none;
+      background: transparent;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-align: left;
+      width: 100%;
+      transition: background 0.15s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .sidebar-btn:hover { background: #f1f3f4; }
+    .sidebar-btn.active {
+      background: #e8f0fe;
+      color: var(--google-blue);
+      font-weight: 500;
+    }
+
+    /* Sub-item 缩进效果 */
+    .sidebar-btn.sub-item {
+      padding-left: 32px;
+      font-size: 0.85rem;
+    }
+
+    /* 右侧展厅 */
+    main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px;
+      position: relative;
+    }
+
+    .month-group { margin-bottom: 32px; }
+    .month-header {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      position: sticky;
+      top: -24px;
+      background: var(--google-bg);
+      padding: 8px 0;
+      z-index: 10;
+    }
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .photo-card {
+      position: relative;
+      background: #e8eaed;
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      aspect-ratio: 1;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .photo-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      z-index: 2;
+    }
+
+    .photo-card img, .photo-card video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .video-icon-badge {
+      position: absolute;
+      top: 8px; right: 8px;
+      background: rgba(0,0,0,0.6);
+      color: #fff;
+      border-radius: 50%;
+      width: 26px; height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 100%);
+      color: #ffffff;
+      padding: 20px 10px 8px;
+      font-size: 0.75rem;
+    }
+
+    .card-title {
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-sub { font-size: 0.7rem; opacity: 0.8; margin-top: 2px; }
+
+    .loading-sentinel {
+      text-align: center;
+      padding: 20px;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    /* Modal 大图弹窗 */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      top:0; left:0; width:100vw; height:100vh;
+      background: rgba(0,0,0,0.92);
+      z-index: 1000;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+    .lightbox-modal.active { display: flex; }
+    .lightbox-body { flex: 1; display: flex; align-items: center; justify-content: center; width: 100%; }
+    .lightbox-media { max-width: 90vw; max-height: 80vh; border-radius: 8px; object-fit: contain; }
+    .lightbox-footer { color: #fff; text-align: center; }
+    .lightbox-close { position: absolute; top: 20px; right: 24px; color: #fff; font-size: 32px; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+  <!-- 顶栏 -->
+  <header>
+    <div class="logo-group" onclick="selectFilter('all')">
+      <svg class="logo-icon" viewBox="0 0 24 24">
+        <path fill="#ea4335" d="M12 0C15.31 0 18 2.69 18 6v6h-6C8.69 12 6 9.31 6 6s2.69-6 6-6z"/>
+        <path fill="#4285f4" d="M24 12c0 3.31-2.69 6-6 6h-6v-6c0-3.31 2.69-6 6-6s6 2.69 6 6z"/>
+        <path fill="#fbbc05" d="M12 24c-3.31 0-6-2.69-6-6v-6h6c3.31 0 6 2.69 6 6s-2.69 6-6 6z"/>
+        <path fill="#34a853" d="M0 12c0-3.31 2.69-6 6-6h6v6c0 3.31-2.69 6-6 6s-6-2.69-6-6z"/>
+      </svg>
+      <span class="logo-text">知沛·陈的欢楽时光</span>
+    </div>
+
+    <div class="search-container">
+      <svg class="search-icon" viewBox="0 0 24 24">
+        <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+      </svg>
+      <input type="text" id="searchInput" class="search-box" placeholder="搜索照片、人物、地点...">
+    </div>
+  </header>
+
+  <!-- 主界面布局 -->
+  <div class="app-layout">
+    <!-- 标准 Google 相册侧边栏 -->
+    <aside>
+      <div class="sidebar-menu">
+        <button class="sidebar-btn active" id="btn-all" onclick="selectFilter('all')">
+          🖼️ 照片
+        </button>
+      </div>
+
+      <div>
+        <div class="sidebar-section-title">集锦 / 探索</div>
+        <div class="sidebar-menu">
+          <button class="sidebar-btn" id="btn-albums" onclick="selectFilter('albums')">📁 相册</button>
+          <button class="sidebar-btn" id="btn-people" onclick="selectFilter('people')">👶 人物</button>
+          <button class="sidebar-btn" id="btn-location" onclick="selectFilter('location')">📍 地点</button>
+          <button class="sidebar-btn" id="btn-videos" onclick="selectFilter('videos')">🎥 视频</button>
+          <button class="sidebar-btn" id="btn-documents" onclick="selectFilter('documents')">📄 文档</button>
+          <button class="sidebar-btn" id="btn-screenshots" onclick="selectFilter('screenshots')">📱 截图和录屏</button>
+        </div>
+      </div>
+
+      <!-- 动态填充子菜单 (如具体月份) -->
+      <div>
+        <div class="sidebar-section-title">时间分类</div>
+        <div class="sidebar-menu" id="month-sub-menu"></div>
+      </div>
+    </aside>
+
+    <!-- 主展示区 -->
+    <main id="mainScrollArea">
+      <div id="gallery"></div>
+      <div class="loading-sentinel" id="loadingSentinel">正在读取 photos.json ...</div>
+    </main>
+  </div>
+
+  <!-- 大图弹窗 Modal -->
+  <div class="lightbox-modal" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <div class="lightbox-body" id="lightboxMedia"></div>
+    <div class="lightbox-footer">
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxMeta" style="margin-top:4px; font-size:0.85rem; opacity:0.8;"></p>
+      <p id="lightboxNotes" style="margin-top:6px; font-size:0.85rem; color:#e0e0e0;"></p>
+    </div>
+  </div>
+
+  <script>
+    const PAGE_SIZE = 24;
+    let rawPhotos = [];
+    let filteredPhotos = [];
+    let loadedCount = 0;
+    let activeFilterType = 'all';
+    let activeFilterValue = null;
+
+    // 1. 初始化并格式化 URL 路径
+    async function init() {
+      try {
+        const res = await fetch('./photos.json?v=' + Date.now());
+        if (!res.ok) throw new Error('读取 photos.json 失败');
+        const data = await res.json();
+
+        // 路径修剪：确保开头的斜杠不会导致本地 404
+        rawPhotos = data.map(item => {
+          let cleanUrl = item.url || '';
+          if (cleanUrl.startsWith('/')) {
+            cleanUrl = cleanUrl.substring(1); // 去掉开头的 /
+          }
+          if (!cleanUrl.startsWith('http') && !cleanUrl.startsWith('./')) {
+            cleanUrl = './' + cleanUrl;
+          }
+          return { ...item, url: cleanUrl };
+        });
+
+        buildMonthMenu();
+        applyFilter();
+      } catch (err) {
+        console.error(err);
+        document.getElementById('loadingSentinel').innerText = '❌ 加载 photos.json 失败，请检查文件路径或网络连接。';
+      }
+
+    // 2. 构建时间（MonthKey）侧边栏项
+    function buildMonthMenu() {
+      const months = new Set();
+      rawPhotos.forEach(item => { if (item.monthKey) months.add(item.monthKey); });
+
+      const container = document.getElementById('month-sub-menu');
+      container.innerHTML = '';
+
+      months.forEach(m => {
+        const btn = document.createElement('button');
+        btn.className = 'sidebar-btn sub-item';
+        btn.innerText = `📅 ${m}`;
+        btn.onclick = () => selectFilter('monthKey', m, btn);
+        container.appendChild(btn);
+      });
+    }
+
+    // 3. 侧边栏菜单切换核心逻辑
+    function selectFilter(type, value = null, btnElement = null) {
+      activeFilterType = type;
+      activeFilterValue = value;
+
+      // 更新侧边栏高亮
+      document.querySelectorAll('.sidebar-btn').forEach(b => b.classList.remove('active'));
+      if (btnElement) {
+        btnElement.classList.add('active');
+      } else {
+        const defaultBtn = document.getElementById(`btn-${type}`);
+        if (defaultBtn) defaultBtn.classList.add('active');
+      }
+
+      applyFilter();
+    }
+
+    // 4. 筛选与数据判定
+    function applyFilter() {
+      const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+
+      // 先进行常规条件过滤
+      let matches = rawPhotos.filter(item => {
+        let matchFilter = true;
+
+        // 根据侧边栏选项筛选
+        switch (activeFilterType) {
+          case 'all': 
+            // 改进1：只显示图片，排除视频
+            matchFilter = (item.type !== 'video'); 
+            break;
+          case 'albums': matchFilter = (item.albums && item.albums.length > 0); break;
+          case 'people': matchFilter = (item.people && item.people.length > 0); break;
+          case 'location': matchFilter = !!item.location; break;
+          case 'videos': matchFilter = (item.type === 'video'); break;
+          case 'documents': matchFilter = (item.type === 'document' || (item.albums && item.albums.includes('文档'))); break;
+          case 'screenshots': matchFilter = (item.type === 'screenshot' || (item.albums && item.albums.includes('截图'))); break;
+          case 'monthKey': matchFilter = (item.monthKey === activeFilterValue); break;
+        }
+
+        // 根据顶部搜索框筛选
+        const searchStr = `${item.title || ''} ${item.location || ''} ${item.notes || ''} ${(item.people || []).join(' ')}`.toLowerCase();
+        const matchSearch = !keyword || searchStr.includes(keyword);
+
+        return matchFilter && matchSearch;
+      });
+
+      // 改进2：如果是“照片”主页，按日期从新到旧排序，并且只保留最近的 50 张照片
+      if (activeFilterType === 'all') {
+        matches.sort((a, b) => {
+          const dateA = a.date ? new Date(a.date) : 0;
+          const dateB = b.date ? new Date(b.date) : 0;
+          return dateB - dateA; // 降序，最新的在前
+        });
+
+        // 如果想限制只看最近 50 张（数字可以自由修改；如果不限制数量只按时间倒序，把下面这行 .slice 删掉即可）：
+        matches = matches.slice(0, 50);
+      }
+
+      filteredPhotos = matches;
+
+      // 清空展厅重新加载
+      document.getElementById('gallery').innerHTML = '';
+      loadedCount = 0;
+      loadMore();
+    }
+
+    // 5. 分页加载 (流控)
+    function loadMore() {
+      const gallery = document.getElementById('gallery');
+      const sentinel = document.getElementById('loadingSentinel');
+
+      if (loadedCount >= filteredPhotos.length) {
+        sentinel.innerText = filteredPhotos.length > 0 ? '已加载完毕' : '没有找到符合条件的照片/视频';
+        return;
+      }
+
+      const nextBatch = filteredPhotos.slice(loadedCount, loadedCount + PAGE_SIZE);
+      loadedCount += nextBatch.length;
+
+      nextBatch.forEach(item => {
+        const monthKey = item.monthKey || '未分类';
+        let monthGroup = document.getElementById(`group-${monthKey}`);
+
+        if (!monthGroup) {
+          monthGroup = document.createElement('div');
+          monthGroup.className = 'month-group';
+          monthGroup.id = `group-${monthKey}`;
+          monthGroup.innerHTML = `
+            <div class="month-header">${monthKey}</div>
+            <div class="photo-grid" id="grid-${monthKey}"></div>
+          `;
+          gallery.appendChild(monthGroup);
+        }
+
+        const grid = document.getElementById(`grid-${monthKey}`);
+        grid.appendChild(createCard(item));
+      });
+
+      sentinel.innerText = loadedCount >= filteredPhotos.length ? '已加载完毕' : '向上滑动加载更多...';
+    }
+
+    // 6. 卡片渲染 + 图片 404 容错
+    function createCard(item) {
+      const card = document.createElement('div');
+      card.className = 'photo-card';
+
+      let mediaHtml = '';
+      if (item.type === 'video') {
+        mediaHtml = `
+          <video src="${item.url}#t=0.1" preload="metadata"></video>
+          <div class="video-icon-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        `;
+      } else {
+        mediaHtml = `<img src="${item.url}" loading="lazy" alt="${item.title}" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x300?text=图片路径错误';">`;
+      }
+
+      card.innerHTML = `
+        ${mediaHtml}
+        <div class="card-overlay">
+          <div class="card-title">${item.title}</div>
+          <div class="card-sub">${item.age || ''} ${item.location ? '· ' + item.location : ''}</div>
+        </div>
+      `;
+
+      card.onclick = () => openLightbox(item);
+      return card;
+    }
+
+    // 7. 全屏 Modal 查看
+    function openLightbox(item) {
+      const mediaContainer = document.getElementById('lightboxMedia');
+      if (item.type === 'video') {
+        mediaContainer.innerHTML = `<video class="lightbox-media" src="${item.url}" controls autoplay></video>`;
+      } else {
+        mediaContainer.innerHTML = `<img class="lightbox-media" src="${item.url}">`;
+      }
+
+      document.getElementById('lightboxTitle').innerText = item.title;
+      document.getElementById('lightboxMeta').innerText = `拍摄时间: ${item.date} | 年龄: ${item.age || '未知'} ${item.location ? '| 地点: ' + item.location : ''}`;
+      document.getElementById('lightboxNotes').innerText = item.notes || '';
+
+      document.getElementById('lightbox').classList.add('active');
+    }
+
+    document.getElementById('lightboxClose').onclick = () => {
+      document.getElementById('lightbox').classList.remove('active');
+      document.getElementById('lightboxMedia').innerHTML = '';
+    };
+
+    // 8. 无限加载监听
+    const observer = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) loadMore();
+    }, { root: document.getElementById('mainScrollArea'), rootMargin: '100px' });
+
+    observer.observe(document.getElementById('loadingSentinel'));
+
+    document.getElementById('searchInput').oninput = applyFilter;
+
+    window.onload = init;
+  </script>
+</body>
+</html>
