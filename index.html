@@ -9,12 +9,12 @@
   <style>
     :root {
       --google-blue: #1a73e8;
-      --google-bg: #f8f9fa;
+      --google-bg: #ffffff;
       --sidebar-bg: #ffffff;
       --text-primary: #202124;
       --text-secondary: #5f6368;
       --border-color: #e0e0e0;
-      --card-radius: 12px;
+      --card-radius: 8px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,7 +28,7 @@
       overflow: hidden;
     }
 
-    /* 顶栏 */
+    /* 顶栏 Header */
     header {
       height: 64px;
       background: #ffffff;
@@ -36,21 +36,38 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 24px;
+      padding: 0 16px;
       z-index: 100;
       flex-shrink: 0;
+      gap: 12px;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--text-secondary);
+      padding: 4px;
     }
 
     .logo-group {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 8px;
       cursor: pointer;
-      min-width: 200px;
+      white-space: nowrap;
     }
 
-    .logo-icon { width: 32px; height: 32px; }
-    .logo-text { font-size: 1.2rem; font-weight: 500; color: #3c4043; }
+    .logo-icon { width: 28px; height: 28px; flex-shrink: 0; }
+    .logo-text { font-size: 1.1rem; font-weight: 500; color: #3c4043; }
 
     .search-container {
       flex: 1;
@@ -60,11 +77,11 @@
 
     .search-box {
       width: 100%;
-      padding: 10px 16px 10px 44px;
+      padding: 8px 16px 8px 40px;
       background: #f1f3f4;
       border: 1px solid transparent;
       border-radius: 24px;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       outline: none;
       transition: all 0.2s;
     }
@@ -77,12 +94,12 @@
 
     .search-icon {
       position: absolute;
-      left: 14px;
+      left: 12px;
       top: 50%;
       transform: translateY(-50%);
       fill: var(--text-secondary);
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
     }
 
     /* 主布局 */
@@ -91,11 +108,25 @@
       flex: 1;
       height: calc(100vh - 64px);
       overflow: hidden;
+      position: relative;
     }
+
+    /* 遮罩层 (移动端 Sidebar 打开时) */
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      width: 100vw;
+      height: calc(100vh - 64px);
+      background: rgba(0,0,0,0.4);
+      z-index: 80;
+    }
+    .sidebar-overlay.active { display: block; }
 
     /* 侧边栏 Sidebar */
     aside {
-      width: 260px;
+      width: 240px;
       background: var(--sidebar-bg);
       border-right: 1px solid var(--border-color);
       overflow-y: auto;
@@ -105,6 +136,8 @@
       gap: 16px;
       flex-shrink: 0;
       user-select: none;
+      transition: transform 0.25s ease-in-out;
+      z-index: 90;
     }
 
     .sidebar-section-title {
@@ -153,107 +186,176 @@
       font-size: 0.85rem;
     }
 
-    /* 右侧展厅 */
+    /* 主展示区 Main */
     main {
       flex: 1;
       overflow-y: auto;
-      padding: 24px;
+      padding: 16px;
       position: relative;
     }
 
-    .month-group { margin-bottom: 32px; }
+    .month-group { margin-bottom: 24px; }
     .month-header {
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 500;
       color: var(--text-primary);
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       position: sticky;
-      top: -24px;
+      top: -16px;
       background: var(--google-bg);
       padding: 8px 0;
       z-index: 10;
     }
 
+    /* 瀑布流自适应网络，原图比例展示 */
     .photo-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 12px;
+      column-count: 5;
+      column-gap: 12px;
     }
 
     .photo-card {
+      break-inside: avoid;
+      margin-bottom: 12px;
       position: relative;
-      background: #e8eaed;
+      background: #f1f3f4;
       border-radius: var(--card-radius);
       overflow: hidden;
       cursor: pointer;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
     .photo-card:hover {
-      transform: scale(1.02);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      z-index: 2;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
     }
 
+    /* 保证媒体按照原始比例渲染，非固定长方形 */
     .photo-card img, .photo-card video {
       width: 100%;
-      height: 100%;
-      object-fit: cover;
+      height: auto;
       display: block;
+      border-radius: var(--card-radius);
+    }
+
+    /* 视频标识角标 */
+    .video-badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-size: 11px;
+      pointer-events: none;
     }
 
     .loading-sentinel {
       text-align: center;
-      padding: 20px;
+      padding: 24px;
       color: var(--text-secondary);
       font-size: 0.85rem;
     }
 
-    /* Modal 大图弹窗 */
+    /* Lightbox 全屏 Modal */
     .lightbox-modal {
       display: none;
       position: fixed;
-      top:0; left:0; width:100vw; height:100vh;
-      background: rgba(0,0,0,0.92);
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
       z-index: 1000;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      padding: 20px;
+      padding: 16px;
     }
     .lightbox-modal.active { display: flex; }
-    .lightbox-body { flex: 1; display: flex; align-items: center; justify-content: center; width: 100%; }
-    .lightbox-media { max-width: 90vw; max-height: 80vh; border-radius: 8px; object-fit: contain; }
-    .lightbox-footer { color: #fff; text-align: center; }
-    .lightbox-close { position: absolute; top: 20px; right: 24px; color: #fff; font-size: 32px; cursor: pointer; }
+    .lightbox-body { 
+      flex: 1; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      width: 100%; 
+      overflow: hidden;
+    }
+    /* 保持全屏大图/视频真实宽高比，防止变形 */
+    .lightbox-media { 
+      max-width: 95vw; 
+      max-height: 82vh; 
+      border-radius: 4px; 
+      object-fit: contain; 
+    }
+    .lightbox-footer { 
+      color: #fff; 
+      text-align: center; 
+      max-width: 800px;
+      width: 100%;
+      padding: 8px;
+    }
+    .lightbox-close { 
+      position: absolute; 
+      top: 12px; 
+      right: 20px; 
+      color: #fff; 
+      font-size: 32px; 
+      cursor: pointer; 
+      z-index: 1010;
+    }
+
+    /* 移动端响应式 Breakpoints */
+    @media (max-width: 1200px) { .photo-grid { column-count: 4; } }
+    @media (max-width: 900px) { .photo-grid { column-count: 3; } }
+    @media (max-width: 768px) {
+      .menu-toggle { display: block; }
+      .logo-text { display: none; }
+      aside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translateX(-100%);
+        box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+      }
+      aside.open {
+        transform: translateX(0);
+      }
+      .photo-grid { column-count: 2; column-gap: 8px; }
+      .photo-card { margin-bottom: 8px; }
+      main { padding: 8px; }
+    }
   </style>
 </head>
 <body>
 
   <!-- 顶栏 -->
   <header>
-    <div class="logo-group" onclick="selectFilter('all')">
-      <svg class="logo-icon" viewBox="0 0 24 24">
-        <path fill="#ea4335" d="M12 0C15.31 0 18 2.69 18 6v6h-6C8.69 12 6 9.31 6 6s2.69-6 6-6z"/>
-        <path fill="#4285f4" d="M24 12c0 3.31-2.69 6-6 6h-6v-6c0-3.31 2.69-6 6-6s6 2.69 6 6z"/>
-        <path fill="#fbbc05" d="M12 24c-3.31 0-6-2.69-6-6v-6h6c3.31 0 6 2.69 6 6s-2.69 6-6 6z"/>
-        <path fill="#34a853" d="M0 12c0-3.31 2.69-6 6-6h6v6c0 3.31-2.69 6-6 6s-6-2.69-6-6z"/>
-      </svg>
-      <span class="logo-text">知沛·陈的欢楽时光</span>
+    <div class="header-left">
+      <button class="menu-toggle" id="menuBtn" onclick="toggleSidebar()">☰</button>
+      <div class="logo-group" onclick="selectFilter('all')">
+        <svg class="logo-icon" viewBox="0 0 24 24">
+          <path fill="#ea4335" d="M12 0C15.31 0 18 2.69 18 6v6h-6C8.69 12 6 9.31 6 6s2.69-6 6-6z"/>
+          <path fill="#4285f4" d="M24 12c0 3.31-2.69 6-6 6h-6v-6c0-3.31 2.69-6 6-6s6 2.69 6 6z"/>
+          <path fill="#fbbc05" d="M12 24c-3.31 0-6-2.69-6-6v-6h6c3.31 0 6 2.69 6 6s-2.69 6-6 6z"/>
+          <path fill="#34a853" d="M0 12c0-3.31 2.69-6 6-6h6v6c0 3.31-2.69 6-6 6s-6-2.69-6-6z"/>
+        </svg>
+        <span class="logo-text">知沛·陈的欢楽时光</span>
+      </div>
     </div>
 
     <div class="search-container">
       <svg class="search-icon" viewBox="0 0 24 24">
         <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
       </svg>
-      <input type="text" id="searchInput" class="search-box" placeholder="搜索照片、人物、地点...">
+      <input type="text" id="searchInput" class="search-box" placeholder="搜索照片、地点、标签...">
     </div>
   </header>
 
   <!-- 主界面布局 -->
   <div class="app-layout">
-    <aside>
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+    
+    <aside id="sidebar">
       <div class="sidebar-menu">
         <button class="sidebar-btn active" id="btn-all" onclick="selectFilter('all')">
           🖼️ 照片
@@ -303,6 +405,19 @@
     let activeFilterType = 'all';
     let activeFilterValue = null;
 
+    // 移动端 Sidebar 控制
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('sidebarOverlay');
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('active');
+    }
+
+    function closeSidebar() {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('sidebarOverlay').classList.remove('active');
+    }
+
     // 1. 初始化
     async function init() {
       try {
@@ -310,12 +425,10 @@
         if (!res.ok) throw new Error('读取 photos.json 失败');
         const data = await res.json();
 
-        rawPhotos = data.map(item => {
-          return { 
-            ...item, 
-            url: (item.url || '').trim() 
-          };
-        });
+        rawPhotos = data.map(item => ({
+          ...item,
+          url: (item.url || '').trim()
+        }));
 
         buildMonthMenu();
         applyFilter();
@@ -325,7 +438,7 @@
       }
     }
 
-    // 2. 构建时间（MonthKey）侧边栏项
+    // 2. 构建月份侧边栏菜单
     function buildMonthMenu() {
       const months = new Set();
       rawPhotos.forEach(item => { if (item.monthKey) months.add(item.monthKey); });
@@ -333,7 +446,7 @@
       const container = document.getElementById('month-sub-menu');
       container.innerHTML = '';
 
-      months.forEach(m => {
+      Array.from(months).sort().reverse().forEach(m => {
         const btn = document.createElement('button');
         btn.className = 'sidebar-btn sub-item';
         btn.innerText = `📅 ${m}`;
@@ -342,7 +455,7 @@
       });
     }
 
-    // 3. 侧边栏菜单切换核心逻辑
+    // 3. 筛选与侧边栏激活逻辑
     function selectFilter(type, value = null, btnElement = null) {
       activeFilterType = type;
       activeFilterValue = value;
@@ -355,10 +468,11 @@
         if (defaultBtn) defaultBtn.classList.add('active');
       }
 
+      closeSidebar();
       applyFilter();
     }
 
-    // 4. 筛选与数据判定
+    // 4. 数据筛选过滤
     function applyFilter() {
       const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
 
@@ -384,24 +498,16 @@
         return matchFilter && matchSearch;
       });
 
-      if (activeFilterType === 'all') {
-        matches.sort((a, b) => {
-          const dateA = a.date ? new Date(a.date) : 0;
-          const dateB = b.date ? new Date(b.date) : 0;
-          return dateB - dateA;
-        });
-
-        matches = matches.slice(0, 50);
-      }
+      // 默认按日期倒序
+      matches.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
 
       filteredPhotos = matches;
-
       document.getElementById('gallery').innerHTML = '';
       loadedCount = 0;
       loadMore();
     }
 
-    // 5. 分页加载
+    // 5. 分页增量加载
     function loadMore() {
       const gallery = document.getElementById('gallery');
       const sentinel = document.getElementById('loadingSentinel');
@@ -436,54 +542,44 @@
       sentinel.innerText = loadedCount >= filteredPhotos.length ? '已加载完毕' : '向上滑动加载更多...';
     }
 
-    // 6. 卡片渲染 (修复标准 img 标签)
+    // 6. 渲染单个卡片 (保留原始比例 + 无冗余文字，保证流畅度)
     function createCard(item) {
       const card = document.createElement('div');
       card.className = 'photo-card';
 
       const cleanUrl = (item.url || '').trim();
+      const isVideo = item.type === 'video' || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.mp4');
 
-      let mediaHtml = '';
-      if (item.type === 'video' || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.mp4')) {
-        mediaHtml = `<video src="${cleanUrl}" controls preload="metadata"></video>`;
+      if (isVideo) {
+        card.innerHTML = `
+          <div class="video-badge">▶ 视频</div>
+          <video src="${cleanUrl}" preload="none" muted></video>
+        `;
       } else {
-        mediaHtml = `<img src="${cleanUrl}" loading="lazy" alt="${item.title || ''}" referrerpolicy="no-referrer" onclick="openLightbox(${JSON.stringify(item).replace(/"/g, '&quot;')})">`;
+        card.innerHTML = `<img src="${cleanUrl}" loading="lazy" alt="${item.title || ''}" referrerpolicy="no-referrer">`;
       }
 
-      const albumsTags = Array.isArray(item.albums) ? item.albums.map(a => `<span class="tag album-tag">${a}</span>`).join('') : '';
-      const peopleTags = Array.isArray(item.people) ? item.people.map(p => `<span class="tag person-tag">${p}</span>`).join('') : '';
-
-      card.innerHTML = `
-        ${mediaHtml}
-        <div class="card-info" style="padding: 10px;">
-          <div class="card-title" style="font-weight:bold; margin-bottom: 5px;">${item.title || '无标题'}</div>
-          <div class="card-date" style="font-size: 12px; color: #666; margin-bottom: 5px;">
-            📅 ${item.date || ''} ${item.age ? '(' + item.age + ')' : ''}
-          </div>
-          ${item.location ? `<div class="card-location" style="font-size: 12px; color: #888; margin-bottom: 5px;">📍 ${item.location}</div>` : ''}
-          <div class="card-tags" style="display:flex; gap:5px; flex-wrap:wrap; margin-top:5px;">
-            ${albumsTags}
-            ${peopleTags}
-          </div>
-          ${item.notes ? `<div class="card-notes" style="font-size: 12px; color: #999; margin-top: 5px;">📝 ${item.notes}</div>` : ''}
-        </div>
-      `;
+      // 点击打开 Modal 查看大图/视频及完整属性
+      card.onclick = () => openLightbox(item);
 
       return card;
     }
 
-    // 7. 全屏 Modal 查看 (修复标准 img 标签)
+    // 7. 打开大图 Lightbox Modal
     function openLightbox(item) {
       const mediaContainer = document.getElementById('lightboxMedia');
-      if (item.type === 'video') {
-        mediaContainer.innerHTML = `<video class="lightbox-media" src="${item.url}" controls autoplay></video>`;
+      const cleanUrl = (item.url || '').trim();
+      const isVideo = item.type === 'video' || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.mp4');
+
+      if (isVideo) {
+        mediaContainer.innerHTML = `<video class="lightbox-media" src="${cleanUrl}" controls autoplay></video>`;
       } else {
-        mediaContainer.innerHTML = `<img class="lightbox-media" src="${item.url}" referrerpolicy="no-referrer">`;
+        mediaContainer.innerHTML = `<img class="lightbox-media" src="${cleanUrl}" referrerpolicy="no-referrer">`;
       }
 
-      document.getElementById('lightboxTitle').innerText = item.title || '';
-      document.getElementById('lightboxMeta').innerText = `拍摄时间: ${item.date || ''} | 年龄: ${item.age || '未知'} ${item.location ? '| 地点: ' + item.location : ''}`;
-      document.getElementById('lightboxNotes').innerText = item.notes || '';
+      document.getElementById('lightboxTitle').innerText = item.title || '无标题';
+      document.getElementById('lightboxMeta').innerText = `拍摄时间: ${item.date || '未知'} ${item.age ? '| 年龄: ' + item.age : ''} ${item.location ? '| 地点: ' + item.location : ''}`;
+      document.getElementById('lightboxNotes').innerText = item.notes ? `📝 ${item.notes}` : '';
 
       document.getElementById('lightbox').classList.add('active');
     }
@@ -493,10 +589,10 @@
       document.getElementById('lightboxMedia').innerHTML = '';
     };
 
-    // 8. 无限加载监听
+    // 8. 滚动监听 (IntersectionObserver)
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) loadMore();
-    }, { root: document.getElementById('mainScrollArea'), rootMargin: '100px' });
+    }, { root: document.getElementById('mainScrollArea'), rootMargin: '200px' });
 
     observer.observe(document.getElementById('loadingSentinel'));
 
