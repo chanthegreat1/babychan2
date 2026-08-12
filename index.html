@@ -477,32 +477,44 @@
       sentinel.innerText = loadedCount >= filteredPhotos.length ? '已加载完毕' : '向上滑动加载更多...';
     }
 
-    // 6. 卡片渲染 + 图片 404 容错
+    // 6. 卡片渲染 + 彻底修复 CDN 图片防盗链/加载问题
     function createCard(item) {
       const card = document.createElement('div');
       card.className = 'photo-card';
 
+      // 清理 URL 空格
+      const cleanUrl = (item.url || '').trim();
+
+      // 判断是视频还是图片
       let mediaHtml = '';
-      if (item.type === 'video') {
-        mediaHtml = `
-          <video src="${item.url}#t=0.1" preload="metadata"></video>
-          <div class="video-icon-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-        `;
+      if (item.type === 'video' || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.mp4')) {
+        mediaHtml = `<video src="${cleanUrl}" controls preload="metadata" style="width:100%; height:auto; border-radius:8px;"></video>`;
       } else {
-        mediaHtml = `< img src="${item.url}" loading="lazy" alt="${item.title}" onerror="this.onerror=null; this.src='https://via.placeholder.com/300x300?text=图片路径错误';">`;
+        // 给 <img> 加上 referrerpolicy="no-referrer"，强行防盗链解封！
+        mediaHtml = `< img src="${cleanUrl}" loading="lazy" alt="${item.title || ''}" referrerpolicy="no-referrer" style="width:100%; height:auto; border-radius:8px; display:block;" onerror="console.error('图片加载失败，真实地址是:', this.src); this.onerror=null; this.src='https://via.placeholder.com/300x300?text=图片加载失败';">`;
       }
 
+      // 渲染标签 (albums 和 people)
+      const albumsTags = Array.isArray(item.albums) ? item.albums.map(a => `<span class="tag album-tag">${a}</span>`).join('') : '';
+      const peopleTags = Array.isArray(item.people) ? item.people.map(p => `<span class="tag person-tag">${p}</span>`).join('') : '';
+
+      // 拼接完整的卡片 HTML
       card.innerHTML = `
         ${mediaHtml}
-        <div class="card-overlay">
-          <div class="card-title">${item.title}</div>
-          <div class="card-sub">${item.age || ''} ${item.location ? '· ' + item.location : ''}</div>
+        <div class="card-info" style="padding: 10px 0;">
+          <div class="card-title" style="font-weight:bold; margin-bottom: 5px;">${item.title || '无标题'}</div>
+          <div class="card-date" style="font-size: 12px; color: #666; margin-bottom: 5px;">
+            📅 ${item.date || ''} ${item.age ? '(' + item.age + ')' : ''}
+          </div>
+          ${item.location ? `<div class="card-location" style="font-size: 12px; color: #888; margin-bottom: 5px;">📍 ${item.location}</div>` : ''}
+          <div class="card-tags" style="display:flex; gap:5px; flex-wrap:wrap; margin-top:5px;">
+            ${albumsTags}
+            ${peopleTags}
+          </div>
+          ${item.notes ? `<div class="card-notes" style="font-size: 12px; color: #999; margin-top: 5px;">📝 ${item.notes}</div>` : ''}
         </div>
       `;
 
-      card.onclick = () => openLightbox(item);
       return card;
     }
 
