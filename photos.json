@@ -7,8 +7,12 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -20,8 +24,12 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -33,8 +41,13 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，涵涵姐姐",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "涵涵姐姐"
+    ],
     "location": "18栋",
     "notes": ""
   },
@@ -46,8 +59,13 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，涵涵姐姐",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "涵涵姐姐"
+    ],
     "location": "18栋附近",
     "notes": ""
   },
@@ -59,8 +77,13 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，涵涵姐姐",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "涵涵姐姐"
+    ],
     "location": "18栋附近",
     "notes": ""
   },
@@ -72,8 +95,12 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "18栋",
     "notes": ""
   },
@@ -85,8 +112,13 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "萍乡服务区",
     "notes": "从长沙回家"
   },
@@ -98,8 +130,12 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": "从长沙回家"
   },
@@ -111,8 +147,12 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": "从长沙回家"
   },
@@ -124,8 +164,12 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": "从长沙回家"
   },
@@ -137,8 +181,12 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": "从长沙回家"
   },
@@ -150,8 +198,12 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "中医院附近",
     "notes": ""
   },
@@ -163,8 +215,12 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "中医院附近",
     "notes": ""
   },
@@ -176,8 +232,12 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "中医院附近",
     "notes": ""
   },
@@ -189,8 +249,12 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "中医院附近",
     "notes": ""
   },
@@ -202,8 +266,12 @@
     "age": "1岁2个月",
     "monthKey": "2026年08月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "中医院附近",
     "notes": ""
   },
@@ -215,8 +283,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -228,8 +301,12 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "18栋附近",
     "notes": "无人驾驶婴儿车"
   },
@@ -241,8 +318,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "古城",
     "notes": "参观烟火晚会被吓到了"
   },
@@ -254,8 +336,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "古城",
     "notes": "参观烟火晚会被吓到了"
   },
@@ -267,8 +354,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "古城",
     "notes": "参观烟火晚会被吓到了"
   },
@@ -280,8 +372,12 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -293,8 +389,12 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -306,8 +406,12 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -319,8 +423,12 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -332,8 +440,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -345,8 +458,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "羊皮洞",
     "notes": ""
   },
@@ -358,8 +476,12 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -371,8 +493,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "青龙商夏",
     "notes": ""
   },
@@ -384,8 +511,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "青龙商夏附近",
     "notes": ""
   },
@@ -397,8 +529,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "青龙商夏附近",
     "notes": ""
   },
@@ -410,8 +547,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "青龙商夏附近",
     "notes": ""
   },
@@ -423,8 +565,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "青龙商夏附近",
     "notes": ""
   },
@@ -436,8 +583,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "青龙商夏附近",
     "notes": ""
   },
@@ -449,8 +601,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "青龙商夏附近",
     "notes": ""
   },
@@ -462,8 +619,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "青龙商夏附近",
     "notes": ""
   },
@@ -475,8 +637,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "青龙商夏",
     "notes": ""
   },
@@ -488,8 +655,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -501,8 +673,12 @@
     "age": "1岁1个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -514,8 +690,13 @@
     "age": "1岁1个月",
     "monthKey": "2026年06月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -527,8 +708,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -540,8 +725,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "聚辉超市",
     "notes": "会清晰地叫“爸爸”了"
   },
@@ -553,8 +742,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "8栋附近",
     "notes": ""
   },
@@ -566,8 +759,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "万载厨房",
     "notes": ""
   },
@@ -579,8 +777,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "万载厨房",
     "notes": ""
   },
@@ -592,8 +794,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "万载厨房",
     "notes": ""
   },
@@ -605,8 +811,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -618,8 +828,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -631,8 +845,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -644,8 +863,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "古城附近",
     "notes": ""
   },
@@ -657,8 +881,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "古城附近",
     "notes": ""
   },
@@ -670,8 +899,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "万载厨房",
     "notes": "被举办了生日宴会"
   },
@@ -683,8 +917,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "万载厨房",
     "notes": "被举办了生日宴会"
   },
@@ -696,8 +934,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "18栋",
     "notes": ""
   },
@@ -709,8 +951,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "18栋",
     "notes": ""
   },
@@ -722,8 +968,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "古城",
     "notes": ""
   },
@@ -735,8 +986,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "古城",
     "notes": ""
   },
@@ -748,8 +1004,14 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲",
+      "哥哥"
+    ],
     "location": "万载菜场",
     "notes": ""
   },
@@ -761,8 +1023,14 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲",
+      "哥哥"
+    ],
     "location": "万载菜场",
     "notes": ""
   },
@@ -774,8 +1042,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "鱼鳞坝",
     "notes": ""
   },
@@ -787,8 +1060,14 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲",
+      "哥哥"
+    ],
     "location": "万载菜场",
     "notes": ""
   },
@@ -800,8 +1079,14 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲",
+      "哥哥"
+    ],
     "location": "万载菜场",
     "notes": ""
   },
@@ -813,8 +1098,14 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲",
+      "哥哥"
+    ],
     "location": "万载菜场",
     "notes": ""
   },
@@ -826,8 +1117,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "鱼鳞坝",
     "notes": ""
   },
@@ -839,8 +1135,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "妇幼保健院",
     "notes": ""
   },
@@ -852,8 +1153,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "18栋",
     "notes": ""
   },
@@ -865,8 +1170,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "18栋",
     "notes": ""
   },
@@ -878,8 +1187,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "18栋",
     "notes": ""
   },
@@ -891,8 +1204,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "母亲单位",
     "notes": ""
   },
@@ -904,8 +1221,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "母亲单位",
     "notes": ""
   },
@@ -917,8 +1238,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年05月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -930,8 +1255,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "罗坊广场",
     "notes": ""
   },
@@ -943,8 +1273,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "罗坊广场",
     "notes": ""
   },
@@ -956,8 +1291,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "罗坊广场",
     "notes": ""
   },
@@ -969,8 +1309,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "罗坊广场",
     "notes": ""
   },
@@ -982,8 +1327,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "罗坊广场",
     "notes": ""
   },
@@ -995,8 +1345,12 @@
     "age": "1岁0个月",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1008,8 +1362,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "罗坊广场",
     "notes": ""
   },
@@ -1021,8 +1380,13 @@
     "age": "1岁0个月",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "罗坊广场",
     "notes": ""
   },
@@ -1034,8 +1398,12 @@
     "age": "11个月29天",
     "monthKey": "2026年05月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1047,8 +1415,12 @@
     "age": "11个月29天",
     "monthKey": "2026年05月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1060,8 +1432,13 @@
     "age": "11个月22天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "",
     "notes": ""
   },
@@ -1073,8 +1450,13 @@
     "age": "11个月22天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "",
     "notes": ""
   },
@@ -1086,8 +1468,13 @@
     "age": "11个月21天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1099,8 +1486,13 @@
     "age": "11个月21天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1112,8 +1504,12 @@
     "age": "11个月21天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "18栋",
     "notes": ""
   },
@@ -1125,8 +1521,12 @@
     "age": "11个月21天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "8栋附近",
     "notes": ""
   },
@@ -1138,8 +1538,13 @@
     "age": "11个月20天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "18栋附近",
     "notes": ""
   },
@@ -1151,8 +1556,13 @@
     "age": "11个月20天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "18栋附近",
     "notes": ""
   },
@@ -1164,8 +1574,13 @@
     "age": "11个月20天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "东门超市",
     "notes": ""
   },
@@ -1177,8 +1592,13 @@
     "age": "11个月20天",
     "monthKey": "2026年05月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "东门超市",
     "notes": ""
   },
@@ -1190,8 +1610,13 @@
     "age": "11个月20天",
     "monthKey": "2026年05月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "东门超市",
     "notes": ""
   },
@@ -1203,8 +1628,13 @@
     "age": "11个月20天",
     "monthKey": "2026年05月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "东门超市",
     "notes": ""
   },
@@ -1216,8 +1646,13 @@
     "age": "11个月19天",
     "monthKey": "2026年05月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "古城",
     "notes": "观赏烟花秀"
   },
@@ -1229,8 +1664,13 @@
     "age": "11个月16天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "聚辉超市",
     "notes": ""
   },
@@ -1242,8 +1682,13 @@
     "age": "11个月15天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1255,8 +1700,13 @@
     "age": "11个月15天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1268,8 +1718,13 @@
     "age": "11个月15天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1281,8 +1736,12 @@
     "age": "11个月15天",
     "monthKey": "2026年05月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1294,8 +1753,12 @@
     "age": "11个月14天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": "又被吸烟了"
   },
@@ -1307,8 +1770,13 @@
     "age": "11个月13天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "18栋",
     "notes": "被父亲误伤后"
   },
@@ -1320,8 +1788,12 @@
     "age": "11个月9天",
     "monthKey": "2026年05月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "8栋",
     "notes": "被父亲误伤中"
   },
@@ -1333,8 +1805,12 @@
     "age": "11个月6天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "古城",
     "notes": ""
   },
@@ -1346,8 +1822,12 @@
     "age": "11个月6天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "古城",
     "notes": ""
   },
@@ -1359,8 +1839,12 @@
     "age": "11个月6天",
     "monthKey": "2026年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "古城",
     "notes": ""
   },
@@ -1372,8 +1856,12 @@
     "age": "11个月3天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -1385,8 +1873,12 @@
     "age": "11个月3天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "18栋附近",
     "notes": ""
   },
@@ -1398,8 +1890,12 @@
     "age": "11个月3天",
     "monthKey": "2026年04月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -1411,8 +1907,13 @@
     "age": "11个月0天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "聚辉超市外",
     "notes": ""
   },
@@ -1424,8 +1925,13 @@
     "age": "11个月0天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "聚辉超市外",
     "notes": ""
   },
@@ -1437,8 +1943,13 @@
     "age": "11个月0天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "",
     "notes": ""
   },
@@ -1450,8 +1961,14 @@
     "age": "11个月0天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲，小婴儿",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲",
+      "小婴儿"
+    ],
     "location": "",
     "notes": ""
   },
@@ -1463,8 +1980,13 @@
     "age": "11个月0天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "龙湖广场",
     "notes": ""
   },
@@ -1476,8 +1998,13 @@
     "age": "11个月0天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "龙湖广场",
     "notes": ""
   },
@@ -1489,8 +2016,13 @@
     "age": "11个月0天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "龙湖广场",
     "notes": ""
   },
@@ -1502,8 +2034,13 @@
     "age": "11个月0天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "龙湖广场",
     "notes": ""
   },
@@ -1515,8 +2052,13 @@
     "age": "11个月0天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "龙湖广场",
     "notes": ""
   },
@@ -1528,8 +2070,13 @@
     "age": "11个月0天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "龙湖广场",
     "notes": ""
   },
@@ -1541,8 +2088,12 @@
     "age": "11个月0天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "工商银行",
     "notes": ""
   },
@@ -1554,8 +2105,12 @@
     "age": "11个月0天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "工商银行",
     "notes": ""
   },
@@ -1567,8 +2122,12 @@
     "age": "10个月29天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "古城",
     "notes": ""
   },
@@ -1580,8 +2139,13 @@
     "age": "10个月28天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "龙湖广场",
     "notes": ""
   },
@@ -1593,8 +2157,13 @@
     "age": "10个月27天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "18栋",
     "notes": ""
   },
@@ -1606,8 +2175,12 @@
     "age": "10个月27天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "18栋",
     "notes": ""
   },
@@ -1619,8 +2192,13 @@
     "age": "10个月21天",
     "monthKey": "2026年04月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1632,8 +2210,13 @@
     "age": "10个月21天",
     "monthKey": "2026年04月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1645,8 +2228,16 @@
     "age": "10个月10天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，祖母，叔父，叔母，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "祖母",
+      "叔父",
+      "叔母",
+      "哥哥"
+    ],
     "location": "",
     "notes": ""
   },
@@ -1658,8 +2249,16 @@
     "age": "10个月10天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，祖母，叔父，叔母，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "祖母",
+      "叔父",
+      "叔母",
+      "哥哥"
+    ],
     "location": "",
     "notes": ""
   },
@@ -1671,8 +2270,13 @@
     "age": "10个月10天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "古城附近",
     "notes": ""
   },
@@ -1684,8 +2288,13 @@
     "age": "10个月10天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "古城附近",
     "notes": ""
   },
@@ -1697,8 +2306,14 @@
     "age": "10个月10天",
     "monthKey": "2026年04月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲，叔父",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲",
+      "叔父"
+    ],
     "location": "聚辉超市",
     "notes": ""
   },
@@ -1710,8 +2325,15 @@
     "age": "10个月10天",
     "monthKey": "2026年04月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲，哥哥，叔父",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲",
+      "哥哥",
+      "叔父"
+    ],
     "location": "聚辉超市",
     "notes": ""
   },
@@ -1723,8 +2345,13 @@
     "age": "10个月9天",
     "monthKey": "2026年04月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，叔父",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "叔父"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -1736,8 +2363,12 @@
     "age": "10个月7天",
     "monthKey": "2026年04月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "18栋附近",
     "notes": ""
   },
@@ -1749,8 +2380,12 @@
     "age": "10个月0天",
     "monthKey": "2026年03月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -1762,8 +2397,12 @@
     "age": "10个月0天",
     "monthKey": "2026年03月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -1775,8 +2414,12 @@
     "age": "9个月16天",
     "monthKey": "2026年03月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -1788,8 +2431,12 @@
     "age": "9个月15天",
     "monthKey": "2026年03月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -1801,8 +2448,13 @@
     "age": "9个月11天",
     "monthKey": "2026年03月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1814,8 +2466,12 @@
     "age": "9个月7天",
     "monthKey": "2026年03月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -1827,8 +2483,13 @@
     "age": "9个月0天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，涵涵姐姐",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "涵涵姐姐"
+    ],
     "location": "礼泉村",
     "notes": ""
   },
@@ -1840,8 +2501,12 @@
     "age": "9个月0天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "礼泉村",
     "notes": ""
   },
@@ -1853,8 +2518,12 @@
     "age": "9个月0天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "礼泉村",
     "notes": ""
   },
@@ -1866,8 +2535,12 @@
     "age": "8个月28天",
     "monthKey": "2026年02月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -1879,8 +2552,13 @@
     "age": "8个月25天",
     "monthKey": "2026年02月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，祖母",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "祖母"
+    ],
     "location": "龙埚里",
     "notes": ""
   },
@@ -1892,8 +2570,13 @@
     "age": "8个月24天",
     "monthKey": "2026年02月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，祖母",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "祖母"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -1905,8 +2588,13 @@
     "age": "8个月21天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1918,8 +2606,13 @@
     "age": "8个月21天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1931,8 +2624,13 @@
     "age": "8个月21天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1944,8 +2642,12 @@
     "age": "8个月21天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1957,8 +2659,13 @@
     "age": "8个月21天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1970,8 +2677,13 @@
     "age": "8个月21天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1983,8 +2695,13 @@
     "age": "8个月21天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -1996,8 +2713,13 @@
     "age": "8个月21天",
     "monthKey": "2026年02月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -2009,8 +2731,13 @@
     "age": "8个月21天",
     "monthKey": "2026年02月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -2022,8 +2749,12 @@
     "age": "8个月15天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -2035,8 +2766,13 @@
     "age": "8个月13天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "青龙商厦",
     "notes": ""
   },
@@ -2048,8 +2784,13 @@
     "age": "8个月12天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "",
     "notes": ""
   },
@@ -2061,8 +2802,13 @@
     "age": "8个月12天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "",
     "notes": ""
   },
@@ -2074,8 +2820,13 @@
     "age": "8个月12天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "",
     "notes": ""
   },
@@ -2087,8 +2838,13 @@
     "age": "8个月10天",
     "monthKey": "2026年02月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -2100,8 +2856,13 @@
     "age": "8个月5天",
     "monthKey": "2026年02月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -2113,8 +2874,13 @@
     "age": "8个月5天",
     "monthKey": "2026年02月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -2126,8 +2892,12 @@
     "age": "8个月3天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2139,8 +2909,12 @@
     "age": "7个月-335天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -2152,8 +2926,12 @@
     "age": "7个月-335天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -2165,8 +2943,13 @@
     "age": "7个月-337天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "古城",
     "notes": ""
   },
@@ -2178,8 +2961,13 @@
     "age": "7个月-337天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "古城",
     "notes": ""
   },
@@ -2191,8 +2979,13 @@
     "age": "7个月-338天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "18栋",
     "notes": ""
   },
@@ -2204,8 +2997,13 @@
     "age": "7个月-346天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2217,8 +3015,13 @@
     "age": "7个月-346天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2230,8 +3033,14 @@
     "age": "7个月-346天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2243,8 +3052,14 @@
     "age": "7个月-346天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2256,8 +3071,12 @@
     "age": "7个月-346天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -2269,8 +3088,13 @@
     "age": "7个月-346天",
     "monthKey": "2026年01月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2282,8 +3106,13 @@
     "age": "7个月-347天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2295,8 +3124,13 @@
     "age": "7个月-347天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2308,8 +3142,13 @@
     "age": "7个月-347天",
     "monthKey": "2026年01月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -2321,8 +3160,13 @@
     "age": "7个月-351天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "古城",
     "notes": ""
   },
@@ -2334,8 +3178,13 @@
     "age": "7个月-351天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -2347,8 +3196,13 @@
     "age": "7个月-351天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥老表",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥老表"
+    ],
     "location": "",
     "notes": ""
   },
@@ -2360,8 +3214,12 @@
     "age": "7个月-352天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -2373,8 +3231,13 @@
     "age": "7个月-354天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "龙湖广场",
     "notes": ""
   },
@@ -2386,8 +3249,13 @@
     "age": "7个月-355天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -2399,8 +3267,13 @@
     "age": "7个月-355天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -2412,8 +3285,13 @@
     "age": "7个月-355天",
     "monthKey": "2026年01月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "8栋",
     "notes": ""
   },
@@ -2425,8 +3303,12 @@
     "age": "7个月-356天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝、父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝、父亲"
+    ],
     "location": "聚辉超市",
     "notes": "生吃南京豆"
   },
@@ -2438,8 +3320,12 @@
     "age": "7个月-356天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝、父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝、父亲"
+    ],
     "location": "聚辉超市",
     "notes": "生吃南京豆"
   },
@@ -2451,8 +3337,13 @@
     "age": "7个月-356天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2464,8 +3355,12 @@
     "age": "7个月-356天",
     "monthKey": "2026年01月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2477,8 +3372,13 @@
     "age": "7个月-356天",
     "monthKey": "2026年01月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2490,8 +3390,12 @@
     "age": "7个月-360天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2503,8 +3407,12 @@
     "age": "7个月-360天",
     "monthKey": "2026年01月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2516,8 +3424,13 @@
     "age": "7个月2天",
     "monthKey": "2025年12月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "工商银行",
     "notes": ""
   },
@@ -2529,8 +3442,13 @@
     "age": "7个月2天",
     "monthKey": "2025年12月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "母亲单位",
     "notes": ""
   },
@@ -2542,8 +3460,13 @@
     "age": "7个月2天",
     "monthKey": "2025年12月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "母亲单位",
     "notes": ""
   },
@@ -2555,8 +3478,12 @@
     "age": "7个月1天",
     "monthKey": "2025年12月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "18栋",
     "notes": ""
   },
@@ -2568,8 +3495,13 @@
     "age": "6个月18天",
     "monthKey": "2025年12月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2581,8 +3513,14 @@
     "age": "6个月18天",
     "monthKey": "2025年12月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2594,8 +3532,13 @@
     "age": "6个月18天",
     "monthKey": "2025年12月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2607,8 +3550,12 @@
     "age": "6个月17天",
     "monthKey": "2025年12月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2620,8 +3567,14 @@
     "age": "6个月10天",
     "monthKey": "2025年12月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2633,8 +3586,13 @@
     "age": "6个月1天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，姨母",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "姨母"
+    ],
     "location": "",
     "notes": ""
   },
@@ -2646,8 +3604,13 @@
     "age": "6个月1天",
     "monthKey": "2025年11月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，舅公",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "舅公"
+    ],
     "location": "",
     "notes": "被举高高"
   },
@@ -2659,8 +3622,13 @@
     "age": "6个月0天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2672,8 +3640,13 @@
     "age": "6个月0天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2685,8 +3658,14 @@
     "age": "5个月29天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2698,8 +3677,13 @@
     "age": "5个月29天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2711,8 +3695,14 @@
     "age": "5个月29天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2724,8 +3714,14 @@
     "age": "5个月29天",
     "monthKey": "2025年11月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲，哥哥",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2737,8 +3733,14 @@
     "age": "5个月29天",
     "monthKey": "2025年11月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲，哥哥",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2750,8 +3752,13 @@
     "age": "5个月28天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2763,8 +3770,13 @@
     "age": "5个月28天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2776,8 +3788,13 @@
     "age": "5个月26天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2789,8 +3806,12 @@
     "age": "5个月26天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2802,8 +3823,13 @@
     "age": "5个月26天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2815,8 +3841,13 @@
     "age": "5个月26天",
     "monthKey": "2025年11月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2828,8 +3859,13 @@
     "age": "5个月21天",
     "monthKey": "2025年11月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "新家",
     "notes": "被哥哥攻击中"
   },
@@ -2841,8 +3877,14 @@
     "age": "5个月19天",
     "monthKey": "2025年11月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，叔母，哥哥",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "叔母",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2854,8 +3896,14 @@
     "age": "5个月17天",
     "monthKey": "2025年11月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，祖母，哥哥",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "祖母",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2867,8 +3915,13 @@
     "age": "5个月14天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2880,8 +3933,15 @@
     "age": "5个月12天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥老表，哥哥外婆，叔母",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥老表",
+      "哥哥外婆",
+      "叔母"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2893,8 +3953,12 @@
     "age": "5个月9天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2906,8 +3970,12 @@
     "age": "5个月9天",
     "monthKey": "2025年11月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2919,8 +3987,12 @@
     "age": "5个月8天",
     "monthKey": "2025年11月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "家中",
     "notes": "出门了，极其欢乐"
   },
@@ -2932,8 +4004,13 @@
     "age": "5个月8天",
     "monthKey": "2025年11月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -2945,8 +4022,13 @@
     "age": "5个月4天",
     "monthKey": "2025年10月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "万载县中医院",
     "notes": "感染风邪，住院中"
   },
@@ -2958,8 +4040,13 @@
     "age": "5个月4天",
     "monthKey": "2025年10月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "万载县中医院",
     "notes": "感染风邪，住院中"
   },
@@ -2971,8 +4058,13 @@
     "age": "4个月24天",
     "monthKey": "2025年10月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "",
     "notes": ""
   },
@@ -2984,8 +4076,13 @@
     "age": "4个月22天",
     "monthKey": "2025年10月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "",
     "notes": ""
   },
@@ -2997,8 +4094,13 @@
     "age": "4个月19天",
     "monthKey": "2025年10月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，姨母",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "姨母"
+    ],
     "location": "礼泉村",
     "notes": ""
   },
@@ -3010,8 +4112,13 @@
     "age": "4个月19天",
     "monthKey": "2025年10月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，姨母",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "姨母"
+    ],
     "location": "礼泉村",
     "notes": ""
   },
@@ -3023,8 +4130,13 @@
     "age": "4个月10天",
     "monthKey": "2025年10月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3036,8 +4148,13 @@
     "age": "4个月8天",
     "monthKey": "2025年10月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，哥哥老表",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥老表"
+    ],
     "location": "哥哥舅父家",
     "notes": ""
   },
@@ -3049,8 +4166,13 @@
     "age": "4个月8天",
     "monthKey": "2025年10月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，叔父",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "叔父"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3062,8 +4184,13 @@
     "age": "4个月7天",
     "monthKey": "2025年10月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，叔父",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "叔父"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3075,8 +4202,13 @@
     "age": "4个月6天",
     "monthKey": "2025年10月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3088,8 +4220,13 @@
     "age": "4个月6天",
     "monthKey": "2025年10月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3101,8 +4238,14 @@
     "age": "4个月4天",
     "monthKey": "2025年10月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3114,8 +4257,14 @@
     "age": "4个月4天",
     "monthKey": "2025年10月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，叔父，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "叔父",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3127,8 +4276,14 @@
     "age": "4个月4天",
     "monthKey": "2025年10月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，叔父，哥哥",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "叔父",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": "被哥哥攻击中"
   },
@@ -3140,8 +4295,14 @@
     "age": "4个月4天",
     "monthKey": "2025年10月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，叔父，哥哥",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "叔父",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3153,8 +4314,13 @@
     "age": "4个月1天",
     "monthKey": "2025年09月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，祖母",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "祖母"
+    ],
     "location": "万载菜场",
     "notes": ""
   },
@@ -3166,8 +4332,13 @@
     "age": "4个月1天",
     "monthKey": "2025年09月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3179,8 +4350,12 @@
     "age": "3个月29天",
     "monthKey": "2025年09月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3192,8 +4367,13 @@
     "age": "3个月20天",
     "monthKey": "2025年09月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，哥哥",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "哥哥"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3205,8 +4385,14 @@
     "age": "3个月19天",
     "monthKey": "2025年09月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，祖母，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "祖母",
+      "哥哥"
+    ],
     "location": "万载菜场",
     "notes": ""
   },
@@ -3218,8 +4404,14 @@
     "age": "3个月19天",
     "monthKey": "2025年09月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，祖母，哥哥",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "祖母",
+      "哥哥"
+    ],
     "location": "万载菜场",
     "notes": ""
   },
@@ -3231,8 +4423,13 @@
     "age": "3个月18天",
     "monthKey": "2025年09月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "分宜收费站",
     "notes": "回家"
   },
@@ -3244,8 +4441,13 @@
     "age": "3个月18天",
     "monthKey": "2025年09月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "分宜收费站",
     "notes": "回家"
   },
@@ -3257,8 +4459,12 @@
     "age": "3个月17天",
     "monthKey": "2025年09月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": "婴儿吸烟"
   },
@@ -3270,8 +4476,13 @@
     "age": "3个月15天",
     "monthKey": "2025年09月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3283,8 +4494,13 @@
     "age": "3个月15天",
     "monthKey": "2025年09月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3296,8 +4512,13 @@
     "age": "3个月13天",
     "monthKey": "2025年09月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余赣西风情街",
     "notes": ""
   },
@@ -3309,8 +4530,13 @@
     "age": "3个月13天",
     "monthKey": "2025年09月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余赣西风情街",
     "notes": ""
   },
@@ -3322,8 +4548,13 @@
     "age": "3个月10天",
     "monthKey": "2025年09月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3335,8 +4566,12 @@
     "age": "3个月9天",
     "monthKey": "2025年09月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3348,8 +4583,13 @@
     "age": "3个月7天",
     "monthKey": "2025年09月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3361,8 +4601,13 @@
     "age": "3个月7天",
     "monthKey": "2025年09月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3374,8 +4619,12 @@
     "age": "3个月6天",
     "monthKey": "2025年09月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3387,8 +4636,12 @@
     "age": "3个月6天",
     "monthKey": "2025年09月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3400,8 +4653,12 @@
     "age": "3个月3天",
     "monthKey": "2025年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3413,8 +4670,13 @@
     "age": "3个月2天",
     "monthKey": "2025年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3426,8 +4688,13 @@
     "age": "3个月2天",
     "monthKey": "2025年08月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": "体验采蜜"
   },
@@ -3439,8 +4706,13 @@
     "age": "3个月1天",
     "monthKey": "2025年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3452,8 +4724,13 @@
     "age": "2个月28天",
     "monthKey": "2025年08月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": "体验萝卜蹲"
   },
@@ -3465,8 +4742,12 @@
     "age": "2个月12天",
     "monthKey": "2025年08月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3478,8 +4759,14 @@
     "age": "2个月10天",
     "monthKey": "2025年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲",
+      "母亲"
+    ],
     "location": "",
     "notes": "跟父母去新余城里"
   },
@@ -3491,8 +4778,13 @@
     "age": "2个月8天",
     "monthKey": "2025年08月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3504,8 +4796,13 @@
     "age": "2个月7天",
     "monthKey": "2025年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3517,8 +4814,13 @@
     "age": "2个月7天",
     "monthKey": "2025年08月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3530,8 +4832,13 @@
     "age": "2个月7天",
     "monthKey": "2025年08月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3543,8 +4850,12 @@
     "age": "1个月27天",
     "monthKey": "2025年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3556,8 +4867,13 @@
     "age": "1个月26天",
     "monthKey": "2025年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3569,8 +4885,13 @@
     "age": "1个月21天",
     "monthKey": "2025年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3582,8 +4903,13 @@
     "age": "1个月21天",
     "monthKey": "2025年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3595,8 +4921,13 @@
     "age": "1个月20天",
     "monthKey": "2025年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3608,8 +4939,13 @@
     "age": "1个月20天",
     "monthKey": "2025年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3621,8 +4957,13 @@
     "age": "1个月20天",
     "monthKey": "2025年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，父亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3634,8 +4975,13 @@
     "age": "1个月19天",
     "monthKey": "2025年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": "能抬头超过5分钟了"
   },
@@ -3647,8 +4993,13 @@
     "age": "1个月18天",
     "monthKey": "2025年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3660,8 +5011,13 @@
     "age": "1个月18天",
     "monthKey": "2025年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3673,8 +5029,13 @@
     "age": "1个月17天",
     "monthKey": "2025年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3686,8 +5047,12 @@
     "age": "1个月15天",
     "monthKey": "2025年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3699,8 +5064,13 @@
     "age": "1个月14天",
     "monthKey": "2025年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝，母亲",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3712,8 +5082,12 @@
     "age": "1个月14天",
     "monthKey": "2025年07月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3725,8 +5099,13 @@
     "age": "1个月13天",
     "monthKey": "2025年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3738,8 +5117,12 @@
     "age": "1个月12天",
     "monthKey": "2025年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "新余乡下",
     "notes": ""
   },
@@ -3751,8 +5134,13 @@
     "age": "1个月5天",
     "monthKey": "2025年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "",
     "notes": ""
   },
@@ -3764,8 +5152,12 @@
     "age": "1个月4天",
     "monthKey": "2025年07月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "黄源村",
     "notes": ""
   },
@@ -3777,8 +5169,13 @@
     "age": "28天",
     "monthKey": "2025年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，舅父",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "舅父"
+    ],
     "location": "黄源村",
     "notes": ""
   },
@@ -3790,8 +5187,13 @@
     "age": "28天",
     "monthKey": "2025年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，舅父",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "舅父"
+    ],
     "location": "黄源村",
     "notes": ""
   },
@@ -3803,8 +5205,12 @@
     "age": "28天",
     "monthKey": "2025年06月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -3816,8 +5222,13 @@
     "age": "21天",
     "monthKey": "2025年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3829,8 +5240,12 @@
     "age": "19天",
     "monthKey": "2025年06月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -3842,8 +5257,15 @@
     "age": "11天",
     "monthKey": "2025年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，叔父，叔母，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "叔父",
+      "叔母",
+      "哥哥"
+    ],
     "location": "万载县中医院",
     "notes": "黄疸高，中医院住院了"
   },
@@ -3855,8 +5277,15 @@
     "age": "11天",
     "monthKey": "2025年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，叔父，叔母，哥哥",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "叔父",
+      "叔母",
+      "哥哥"
+    ],
     "location": "万载县中医院",
     "notes": ""
   },
@@ -3868,8 +5297,12 @@
     "age": "10天",
     "monthKey": "2025年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "家中",
     "notes": "楼顶晒太阳"
   },
@@ -3881,8 +5314,13 @@
     "age": "10天",
     "monthKey": "2025年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，母亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "母亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3894,8 +5332,12 @@
     "age": "10天",
     "monthKey": "2025年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -3907,8 +5349,13 @@
     "age": "8天",
     "monthKey": "2025年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3920,8 +5367,13 @@
     "age": "8天",
     "monthKey": "2025年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3933,8 +5385,13 @@
     "age": "8天",
     "monthKey": "2025年06月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "家中",
     "notes": ""
   },
@@ -3946,8 +5403,12 @@
     "age": "5天",
     "monthKey": "2025年06月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "",
     "notes": ""
   },
@@ -3959,8 +5420,12 @@
     "age": "2天",
     "monthKey": "2025年05月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "万载县中医院",
     "notes": "第一次洗澡"
   },
@@ -3972,8 +5437,12 @@
     "age": "1天",
     "monthKey": "2025年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "万载县中医院",
     "notes": "出生第2天"
   },
@@ -3985,8 +5454,13 @@
     "age": "0天",
     "monthKey": "2025年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "万载县中医院",
     "notes": "出生第1天"
   },
@@ -3998,8 +5472,13 @@
     "age": "0天",
     "monthKey": "2025年05月",
     "type": "photo",
-    "albums": "日常记录",
-    "people": "贝贝，父亲",
+    "albums": [
+      "日常记录"
+    ],
+    "people": [
+      "贝贝",
+      "父亲"
+    ],
     "location": "万载县中医院",
     "notes": "出生第1天"
   },
@@ -4011,8 +5490,12 @@
     "age": "0天",
     "monthKey": "2025年05月",
     "type": "video",
-    "albums": "精彩视频",
-    "people": "贝贝",
+    "albums": [
+      "精彩视频"
+    ],
+    "people": [
+      "贝贝"
+    ],
     "location": "万载县中医院",
     "notes": "出生第1天"
   }
