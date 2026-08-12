@@ -93,7 +93,7 @@
       overflow: hidden;
     }
 
-    /* 侧边栏 Sidebar (标准 Google Photos 样式) */
+    /* 侧边栏 Sidebar */
     aside {
       width: 260px;
       background: var(--sidebar-bg);
@@ -148,7 +148,6 @@
       font-weight: 500;
     }
 
-    /* Sub-item 缩进效果 */
     .sidebar-btn.sub-item {
       padding-left: 32px;
       font-size: 0.85rem;
@@ -186,7 +185,6 @@
       background: #e8eaed;
       border-radius: var(--card-radius);
       overflow: hidden;
-      aspect-ratio: 1;
       cursor: pointer;
       box-shadow: 0 1px 3px rgba(0,0,0,0.06);
       transition: transform 0.2s, box-shadow 0.2s;
@@ -204,36 +202,6 @@
       object-fit: cover;
       display: block;
     }
-
-    .video-icon-badge {
-      position: absolute;
-      top: 8px; right: 8px;
-      background: rgba(0,0,0,0.6);
-      color: #fff;
-      border-radius: 50%;
-      width: 26px; height: 26px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .card-overlay {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.7) 100%);
-      color: #ffffff;
-      padding: 20px 10px 8px;
-      font-size: 0.75rem;
-    }
-
-    .card-title {
-      font-weight: 500;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .card-sub { font-size: 0.7rem; opacity: 0.8; margin-top: 2px; }
 
     .loading-sentinel {
       text-align: center;
@@ -285,7 +253,6 @@
 
   <!-- 主界面布局 -->
   <div class="app-layout">
-    <!-- 标准 Google 相册侧边栏 -->
     <aside>
       <div class="sidebar-menu">
         <button class="sidebar-btn active" id="btn-all" onclick="selectFilter('all')">
@@ -305,14 +272,12 @@
         </div>
       </div>
 
-      <!-- 动态填充子菜单 (如具体月份) -->
       <div>
         <div class="sidebar-section-title">时间分类</div>
         <div class="sidebar-menu" id="month-sub-menu"></div>
       </div>
     </aside>
 
-    <!-- 主展示区 -->
     <main id="mainScrollArea">
       <div id="gallery"></div>
       <div class="loading-sentinel" id="loadingSentinel">正在读取 photos.json ...</div>
@@ -330,7 +295,7 @@
     </div>
   </div>
 
-    <script>
+  <script>
     const PAGE_SIZE = 24;
     let rawPhotos = [];
     let filteredPhotos = [];
@@ -338,14 +303,13 @@
     let activeFilterType = 'all';
     let activeFilterValue = null;
 
-// 1. 初始化并格式化 URL 路径（已去除多余的 ./ 篡改逻辑）
+    // 1. 初始化
     async function init() {
       try {
         const res = await fetch('./photos.json?v=' + Date.now());
         if (!res.ok) throw new Error('读取 photos.json 失败');
         const data = await res.json();
 
-        // 原汁原味保留 JSON 里的 CDN 网址，只做去空格处理
         rawPhotos = data.map(item => {
           return { 
             ...item, 
@@ -383,7 +347,6 @@
       activeFilterType = type;
       activeFilterValue = value;
 
-      // 更新侧边栏高亮
       document.querySelectorAll('.sidebar-btn').forEach(b => b.classList.remove('active'));
       if (btnElement) {
         btnElement.classList.add('active');
@@ -399,11 +362,9 @@
     function applyFilter() {
       const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
 
-      // 先进行常规条件过滤
       let matches = rawPhotos.filter(item => {
         let matchFilter = true;
 
-        // 根据侧边栏选项筛选
         switch (activeFilterType) {
           case 'all': 
             matchFilter = (item.type !== 'video'); 
@@ -417,7 +378,6 @@
           case 'monthKey': matchFilter = (item.monthKey === activeFilterValue); break;
         }
 
-        // 根据顶部搜索框筛选
         const searchStr = `${item.title || ''} ${item.location || ''} ${item.notes || ''} ${(item.people || []).join(' ')}`.toLowerCase();
         const matchSearch = !keyword || searchStr.includes(keyword);
 
@@ -436,13 +396,12 @@
 
       filteredPhotos = matches;
 
-      // 清空展厅重新加载
       document.getElementById('gallery').innerHTML = '';
       loadedCount = 0;
       loadMore();
     }
 
-    // 5. 分页加载 (流控)
+    // 5. 分页加载
     function loadMore() {
       const gallery = document.getElementById('gallery');
       const sentinel = document.getElementById('loadingSentinel');
@@ -477,31 +436,26 @@
       sentinel.innerText = loadedCount >= filteredPhotos.length ? '已加载完毕' : '向上滑动加载更多...';
     }
 
-    // 6. 卡片渲染 + 彻底修复 CDN 图片防盗链/加载问题
+    // 6. 卡片渲染 (修复标准 img 标签)
     function createCard(item) {
       const card = document.createElement('div');
       card.className = 'photo-card';
 
-      // 清理 URL 空格
       const cleanUrl = (item.url || '').trim();
 
-      // 判断是视频还是图片
       let mediaHtml = '';
       if (item.type === 'video' || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.mp4')) {
-        mediaHtml = `<video src="${cleanUrl}" controls preload="metadata" style="width:100%; height:auto; border-radius:8px;"></video>`;
+        mediaHtml = `<video src="${cleanUrl}" controls preload="metadata"></video>`;
       } else {
-        // 给 <img> 加上 referrerpolicy="no-referrer"，强行防盗链解封！
-        mediaHtml = `< img src="${cleanUrl}" loading="lazy" alt="${item.title || ''}" referrerpolicy="no-referrer" style="width:100%; height:auto; border-radius:8px; display:block;" onerror="console.error('图片加载失败，真实地址是:', this.src); this.onerror=null; this.src='https://via.placeholder.com/300x300?text=图片加载失败';">`;
+        mediaHtml = `<img src="${cleanUrl}" loading="lazy" alt="${item.title || ''}" referrerpolicy="no-referrer" onclick="openLightbox(${JSON.stringify(item).replace(/"/g, '&quot;')})">`;
       }
 
-      // 渲染标签 (albums 和 people)
       const albumsTags = Array.isArray(item.albums) ? item.albums.map(a => `<span class="tag album-tag">${a}</span>`).join('') : '';
       const peopleTags = Array.isArray(item.people) ? item.people.map(p => `<span class="tag person-tag">${p}</span>`).join('') : '';
 
-      // 拼接完整的卡片 HTML
       card.innerHTML = `
         ${mediaHtml}
-        <div class="card-info" style="padding: 10px 0;">
+        <div class="card-info" style="padding: 10px;">
           <div class="card-title" style="font-weight:bold; margin-bottom: 5px;">${item.title || '无标题'}</div>
           <div class="card-date" style="font-size: 12px; color: #666; margin-bottom: 5px;">
             📅 ${item.date || ''} ${item.age ? '(' + item.age + ')' : ''}
@@ -518,17 +472,17 @@
       return card;
     }
 
-    // 7. 全屏 Modal 查看
+    // 7. 全屏 Modal 查看 (修复标准 img 标签)
     function openLightbox(item) {
       const mediaContainer = document.getElementById('lightboxMedia');
       if (item.type === 'video') {
         mediaContainer.innerHTML = `<video class="lightbox-media" src="${item.url}" controls autoplay></video>`;
       } else {
-        mediaContainer.innerHTML = `< img class="lightbox-media" src="${item.url}">`;
+        mediaContainer.innerHTML = `<img class="lightbox-media" src="${item.url}" referrerpolicy="no-referrer">`;
       }
 
-      document.getElementById('lightboxTitle').innerText = item.title;
-      document.getElementById('lightboxMeta').innerText = `拍摄时间: ${item.date} | 年龄: ${item.age || '未知'} ${item.location ? '| 地点: ' + item.location : ''}`;
+      document.getElementById('lightboxTitle').innerText = item.title || '';
+      document.getElementById('lightboxMeta').innerText = `拍摄时间: ${item.date || ''} | 年龄: ${item.age || '未知'} ${item.location ? '| 地点: ' + item.location : ''}`;
       document.getElementById('lightboxNotes').innerText = item.notes || '';
 
       document.getElementById('lightbox').classList.add('active');
