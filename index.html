@@ -337,32 +337,28 @@
     let activeFilterType = 'all';
     let activeFilterValue = null;
 
-    // 1. 初始化并格式化 URL 路径
+// 1. 初始化并格式化 URL 路径（已去除多余的 ./ 篡改逻辑）
     async function init() {
       try {
         const res = await fetch('./photos.json?v=' + Date.now());
         if (!res.ok) throw new Error('读取 photos.json 失败');
         const data = await res.json();
 
-        // 路径修剪：确保开头的斜杠不会导致本地 404
+        // 原汁原味保留 JSON 里的 CDN 网址，只做去空格处理
         rawPhotos = data.map(item => {
-          let cleanUrl = item.url || '';
-          if (cleanUrl.startsWith('/')) {
-            cleanUrl = cleanUrl.substring(1); // 去掉开头的 /
-          }
-          if (!cleanUrl.startsWith('http') && !cleanUrl.startsWith('./')) {
-            cleanUrl = './' + cleanUrl;
-          }
-          return { ...item, url: cleanUrl };
+          return { 
+            ...item, 
+            url: (item.url || '').trim() 
+          };
         });
 
         buildMonthMenu();
         applyFilter();
       } catch (err) {
-        console.error(err);
+        console.error('详细报错信息:', err);
         document.getElementById('loadingSentinel').innerText = '❌ 加载 photos.json 失败，请检查文件路径或网络连接。';
       }
-    } // <-- 修正：补上了这里缺失的闭合大括号！
+    }
 
     // 2. 构建时间（MonthKey）侧边栏项
     function buildMonthMenu() {
