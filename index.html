@@ -87,13 +87,7 @@
 
     /* 目标2实现：列表预览图跟随视频真实宽高比，防止横竖屏拉伸 */
     .media-wrapper { position: relative; width: 100%; background: #000; overflow: hidden; display: block; }
-    .photo-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-      object-fit: contain;
-      background: #000;
-    }
+    .photo-card img { width: 100%; height: auto; display: block; object-fit: contain; }
 
     /* 视频标识角标 */
     .video-badge {
@@ -417,10 +411,32 @@
         // 关键改动：优化属性并使用单 source，杜绝预加载卡死
         mediaContainer.innerHTML = `
           <video id="activeVideo" class="lightbox-media" controls playsinline webkit-playsinline="true" preload="metadata">
-            <source src="${cleanUrl}">
+            <source src="${cleanUrl}" type="video/webm">
             您的浏览器不支持该视频格式。
           </video>
         `;
+
+        const video = document.getElementById('activeVideo');
+
+        video.addEventListener('loadedmetadata', () => {
+          const vw = video.videoWidth;
+          const vh = video.videoHeight;
+
+          if (!vw || !vh) return;
+
+          const ratio = vw / vh;
+
+          video.style.maxWidth = '95vw';
+          video.style.maxHeight = '85vh';
+
+          if (ratio < 1) {
+            video.style.width = 'auto';
+            video.style.height = '85vh';
+          } else {
+            video.style.width = '95vw';
+            video.style.height = 'auto';
+          }
+        });
       } else {
         mediaContainer.innerHTML = `<img class="lightbox-media" src="${cleanUrl}" referrerpolicy="no-referrer">`;
       }
@@ -430,21 +446,6 @@
       document.getElementById('lightboxNotes').innerText = item.notes ? `📝 ${item.notes}` : '';
 
       document.getElementById('lightbox').classList.add('active');
-
-      // 根据真实视频比例调整显示，避免竖屏视频被拉伸
-      const activeVideo = document.getElementById('activeVideo');
-      if (activeVideo) {
-        activeVideo.addEventListener('loadedmetadata', () => {
-          const ratio = activeVideo.videoWidth / activeVideo.videoHeight;
-          if (ratio > 0 && ratio < 1) {
-            activeVideo.style.height = '100%';
-            activeVideo.style.width = 'auto';
-          } else {
-            activeVideo.style.width = '100%';
-            activeVideo.style.height = 'auto';
-          }
-        }, { once: true });
-      }
     }
 
     // 关闭 Modal 并清空视频资源，防止后台继续占 CPU
