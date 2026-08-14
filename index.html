@@ -85,8 +85,8 @@
     }
     .photo-card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.1); }
 
-    /* 瀑布流卡片媒体容器：不再写死比例，完全跟随缩略图的自然宽高 */
-    .media-wrapper { position: relative; width: 100%; background: #111111; overflow: hidden; display: block; }
+    /* 目标2实现：列表预览图跟随视频真实宽高比，防止横竖屏拉伸 */
+    .media-wrapper { position: relative; width: 100%; background: #000; overflow: hidden; display: block; }
     .photo-card img { width: 100%; height: auto; display: block; object-fit: contain; }
 
     /* 视频标识角标 */
@@ -99,22 +99,37 @@
     .card-sub-text { font-size: 0.78rem; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .loading-sentinel { text-align: center; padding: 30px; color: var(--text-secondary); font-size: 0.85rem; }
 
-    /* 🛠️ Lightbox Modal 全屏弹窗：使用 absolute 居中死锁 iOS WebKit 的竖屏/横屏计算 Bug */
+    /* 🛠️ Lightbox Modal 全屏弹窗：全面改用 Flex 布局，彻底抛弃 transform 居中定位 */
     .lightbox-modal {
       display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100dvh; background: rgba(0, 0, 0, 0.96); z-index: 1000; flex-direction: column; justify-content: space-between; padding: 16px; box-sizing: border-box;
     }
     .lightbox-modal.active { display: flex; }
 
-    .lightbox-body { position: relative; flex: 1; width: 100%; height: 100%; overflow: hidden; min-height: 0; }
-
-    /* 强制限制图片和视频在弹窗内绝对居中且不超屏，兼容 GPU 硬件加速 */
-    .lightbox-media { 
-      position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%);
-      max-width: 100% !important; max-height: 100% !important; width: auto !important; height: auto !important;
-      object-fit: contain !important; border-radius: 6px; outline: none;
+    /* 彻底修复：用纯 Flex 居中替代 absolute + transform，硬件渲染加速不再卡顿掉帧 */
+    .lightbox-body { 
+      position: relative; 
+      flex: 1; 
+      width: 100%; 
+      height: 100%; 
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
     }
 
-    .lightbox-footer { color: #fff; text-align: center; max-width: 800px; width: 100%; padding: 8px; margin: 0 auto; }
+    /* 目标1实现：消除渲染BUG，保持视频比例，开启原生流畅解码 */
+    .lightbox-media { 
+      max-width: 100%; 
+      max-height: 100%; 
+      width: auto; 
+      height: auto;
+      object-fit: contain; 
+      border-radius: 6px; 
+      outline: none;
+    }
+
+    .lightbox-footer { color: #fff; text-align: center; max-width: 800px; width: 100%; padding: 8px; margin: 0 auto; flex-shrink: 0; }
     .lightbox-close { position: absolute; top: 16px; right: 24px; color: #fff; font-size: 36px; cursor: pointer; z-index: 1010; line-height: 1; }
 
     /* 移动端响应式断点 */
@@ -342,7 +357,7 @@
       sentinel.innerText = loadedCount >= filteredPhotos.length ? '已加载完毕' : '向上滑动加载更多...';
     }
 
-    // 6. 渲染卡片：极轻量化静态 WebP 首帧
+    // 6. 渲染卡片：静态 WebP 首帧自适应宽高比
     function createCard(item) {
       const card = document.createElement('div');
       card.className = 'photo-card';
@@ -386,16 +401,17 @@
       return card;
     }
 
-    // 7. 打开 Modal：去掉 JS 脚本自动 play()，直接触发原生 60 帧 GPU 流式解码
+    // 7. 打开 Modal：采用兼容性最佳的原生视频容器设置
     function openLightbox(item) {
       const mediaContainer = document.getElementById('lightboxMedia');
       const cleanUrl = (item.url || '').trim();
       const isVideo = item.type === 'video' || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.mp4');
 
       if (isVideo) {
+        // 关键改动：优化属性并使用单 source，杜绝预加载卡死
         mediaContainer.innerHTML = `
-          <video id="activeVideo" class="lightbox-media" controls playsinline webkit-playsinline="true" preload="metadata">
-            <source src="${cleanUrl}" type="${cleanUrl.endsWith('.webm') ? 'video/webm' : 'video/mp4'}">
+          <video id="activeVideo" class="lightbox-media" controls playsinline webkit-playsinline="true" preload="auto">
+            <source src="${cleanUrl}">
             您的浏览器不支持该视频格式。
           </video>
         `;
@@ -410,7 +426,7 @@
       document.getElementById('lightbox').classList.add('active');
     }
 
-    // 关闭 Modal 并清空视频资源
+    // 关闭 Modal 并清空视频资源，防止后台继续占 CPU
     function closeLightbox() {
       const modal = document.getElementById('lightbox');
       const mediaContainer = document.getElementById('lightboxMedia');
@@ -418,7 +434,7 @@
       const video = mediaContainer.querySelector('video');
       if (video) {
         video.pause();
-        video.src = '';
+        video.removeAttribute('src');
         video.load();
       }
       
