@@ -329,15 +329,16 @@
       position: relative;
     }
 
-    /* 限制图片与视频在移动端完全自适应，严格保持等比例 */
+    /* 强制死锁图片和视频的尺寸，绝不许超出屏幕，绝不许拉伸 */
     .lightbox-media { 
-      max-width: 100%; 
-      max-height: 100%; 
-      width: auto;
-      height: auto;
-      border-radius: 4px; 
-      object-fit: contain; /* 保证视频/图片按原始宽高比完整居中显示，绝不拉伸变形 */
-      outline: none;
+      max-width: 100% !important; 
+      max-height: 80vh !important; /* 留出顶部和底部的文字/关闭按钮空间 */
+      width: auto !important;
+      height: auto !important;
+      border-radius: 6px; 
+      object-fit: contain !important; /* 保持原比例，两边留黑边也不变形 */
+      display: block;
+      margin: 0 auto;
     }
     .lightbox-footer { 
       color: #fff; 
@@ -648,30 +649,37 @@
       return card;
     }
 
-    // 7. 打开 Modal 查看大图/播放高清原视频
+    // 7. 打开 Modal 查看大图/播放高清原视频（iOS Safari 终极兼容版）
     function openLightbox(item) {
       const mediaContainer = document.getElementById('lightboxMedia');
       const cleanUrl = (item.url || '').trim();
       const isVideo = item.type === 'video' || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.mp4');
 
       if (isVideo) {
-        // webkit-playsinline 和 playsinline 专治移动端/Safari 强制全屏和异常缩放
+        // 关键修改：
+        // 1. 删掉 preload="auto" 和 crossorigin="anonymous"（解决 iOS 1秒1帧卡顿）
+        // 2. 加上 preload="metadata" 让浏览器只拉取视频头信息，交由系统硬件解码
+        // 3. 严格保留 playsinline 和 webkit-playsinline
         mediaContainer.innerHTML = `
-          <video id="activeVideo" class="lightbox-media" controls autoplay playsinline webkit-playsinline="true" preload="auto" crossorigin="anonymous">
+          <video id="activeVideo" class="lightbox-media" controls playsinline webkit-playsinline="true" preload="metadata">
             <source src="${cleanUrl}" type="${cleanUrl.endsWith('.webm') ? 'video/webm' : 'video/mp4'}">
             您的浏览器不支持该视频格式。
           </video>
         `;
 
-        const videoElem = document.getElementById('activeVideo');
-        if (videoElem) {
-          const playPromise = videoElem.play();
-          if (playPromise !== undefined) {
-            playPromise.catch(error => {
-              console.warn("移动端自动播放被拦截，等待手动点击播放:", error);
-            });
+        // 延迟 50ms 再调用 play()，给移动端 DOM 渲染和硬件解码器初始化留出缓冲时间
+        setTimeout(() => {
+          const videoElem = document.getElementById('activeVideo');
+          if (videoElem) {
+            const playPromise = videoElem.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(error => {
+                console.warn("移动端自动播放限制，等待用户手动点击:", error);
+              });
+            }
           }
-        }
+        }, 50);
+
       } else {
         mediaContainer.innerHTML = `<img class="lightbox-media" src="${cleanUrl}" referrerpolicy="no-referrer">`;
       }
