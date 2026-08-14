@@ -557,7 +557,7 @@
       const sentinel = document.getElementById('loadingSentinel');
 
       if (loadedCount >= filteredPhotos.length) {
-        sentinel.innerText = filteredPhotos.length > 0 ? '已加载完毕' : '没有找到符合条件的照片/视频';
+        sentinel.innerText = filteredPhotos.length > 0 ? '已加载完毕' : '欢楽加载中...';
         return;
       }
 
@@ -635,30 +635,44 @@
     }
 
     // 7. 打开 Modal 查看大图/播放高清原视频
-    function openLightbox(item) {
-      const mediaContainer = document.getElementById('lightboxMedia');
-      const cleanUrl = (item.url || '').trim();
-      const isVideo = item.type === 'video' || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.mp4');
+// 7. 打开 Modal 查看大图/播放高清原视频（修复 Safari/iOS 播放卡顿与暂停问题）
+function openLightbox(item) {
+  const mediaContainer = document.getElementById('lightboxMedia');
+  const cleanUrl = (item.url || '').trim();
+  const isVideo = item.type === 'video' || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.mp4');
 
-      if (isVideo) {
-        // 加载真实视频流
-        mediaContainer.innerHTML = `
-          <video class="lightbox-media" controls autoplay playsinline>
-            <source src="${cleanUrl}">
-            您的浏览器不支持该视频格式。
-          </video>
-        `;
-      } else {
-        // 加载高清原图
-        mediaContainer.innerHTML = `<img class="lightbox-media" src="${cleanUrl}" referrerpolicy="no-referrer">`;
+  if (isVideo) {
+    // 强制使用原生 video 结构，加 preload="auto" 和 crossOrigin
+    mediaContainer.innerHTML = `
+      <video id="activeVideo" class="lightbox-media" controls playsinline preload="auto" crossorigin="anonymous">
+        <source src="${cleanUrl}" type="${cleanUrl.endsWith('.webm') ? 'video/webm' : 'video/mp4'}">
+        您的浏览器不支持该视频格式。
+      </video>
+    `;
+
+    // 显式用 JS 触发播放，并捕获自动播放被限制的异常
+    const videoElem = document.getElementById('activeVideo');
+    if (videoElem) {
+      const playPromise = videoElem.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.warn("自动播放被浏览器拦截，降级为等待用户手动点击播放:", error);
+          // 如果带声音自动播放被拦截，取消 autoplay，让用户手动点播放键
+          videoElem.controls = true;
+        });
       }
-
-      document.getElementById('lightboxTitle').innerText = item.title || '无标题';
-      document.getElementById('lightboxMeta').innerText = `拍摄时间: ${item.date || '未知'} ${item.age ? '| 年龄: ' + item.age : ''} ${item.location ? '| 地点: ' + item.location : ''}`;
-      document.getElementById('lightboxNotes').innerText = item.notes ? `📝 ${item.notes}` : '';
-
-      document.getElementById('lightbox').classList.add('active');
     }
+  } else {
+    // 加载高清原图
+    mediaContainer.innerHTML = `<img class="lightbox-media" src="${cleanUrl}" referrerpolicy="no-referrer">`;
+  }
+
+  document.getElementById('lightboxTitle').innerText = item.title || '无标题';
+  document.getElementById('lightboxMeta').innerText = `拍摄时间: ${item.date || '未知'} ${item.age ? '| 年龄: ' + item.age : ''} ${item.location ? '| 地点: ' + item.location : ''}`;
+  document.getElementById('lightboxNotes').innerText = item.notes ? `📝 ${item.notes}` : '';
+
+  document.getElementById('lightbox').classList.add('active');
+}
 
     // 🛠️ 关键修复：关闭 Modal 时彻底销毁视频，防止后台继续发声/占用内存
     function closeLightbox() {
