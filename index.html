@@ -472,6 +472,26 @@
       document.getElementById('sidebarOverlay').classList.remove('active');
     }
 
+// 🛠️ 终极抢救洗路函数：强行抹平子目录重定向，死锁完整域名
+    function hardFixUrl(rawPath) {
+      if (!rawPath) return '';
+      let p = rawPath.trim();
+
+      // 1. 如果带有错误的 /babychan/ 路径，直接砍掉
+      p = p.replace('img.babychan.cc.cd/babychan/', 'img.babychan.cc.cd/');
+      p = p.replace('babychan.cc.cd/babychan/', 'babychan.cc.cd/');
+      p = p.replace(/^\/?babychan\//, '/'); // 清理相对路径开头的 babychan/
+
+      // 2. 如果已经形成了完整 https 地址，直接返回，不再让浏览器自行拼接
+      if (p.startsWith('http://') || p.startsWith('https://')) {
+        return p;
+      }
+
+      // 3. 强制死锁加上 https://img.babychan.cc.cd 域名，彻底切断主站 /babychan 目录的污染
+      if (!p.startsWith('/')) p = '/' + p;
+      return 'https://img.babychan.cc.cd' + p;
+    }
+
     // 1. 初始化
     async function init() {
       try {
@@ -479,10 +499,11 @@
         if (!res.ok) throw new Error('读取 photos.json 失败');
         const data = await res.json();
 
+        // 所有数据一加载，立刻强行洗成带有 https:// 的完整绝对 URL
         rawPhotos = data.map(item => ({
           ...item,
-          url: (item.url || '').trim(),
-          thumbUrl: (item.thumbUrl || item.url || '').trim()
+          url: hardFixUrl(item.url),
+          thumbUrl: hardFixUrl(item.thumbUrl || item.url)
         }));
 
         buildMonthMenu();
