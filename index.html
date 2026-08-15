@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="referrer" content="no-referrer">
   <title>知沛·陈的欢楽时光</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap">
@@ -26,6 +26,7 @@
       flex-direction: column;
       height: 100vh;
       overflow: hidden;
+      -webkit-tap-highlight-color: transparent;
     }
 
     /* 顶栏 Header */
@@ -231,18 +232,18 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
-/* 1. 瀑布流卡片媒体容器：不再限制固定比例，完全由图片/视频原始尺寸决定 */
+    /* 瀑布流卡片媒体容器 */
     .media-wrapper {
       position: relative;
       width: 100%;
-      background: #111111; /* 统一深色底，防闪烁 */
+      background: #111111;
       overflow: hidden;
       display: block;
     }
 
     .photo-card img {
       width: 100%;
-      height: auto; /* 核心：让竖屏缩略图自然拉长，横屏缩略图保持横向 */
+      height: auto;
       display: block;
       object-fit: contain;
     }
@@ -262,7 +263,7 @@
       z-index: 2;
     }
 
-    /* 缩略图下方信息栏（年龄/时间描述） */
+    /* 缩略图下方信息栏 */
     .card-meta-bar {
       padding: 10px 12px;
       background: #ffffff;
@@ -296,7 +297,7 @@
       font-size: 0.85rem;
     }
 
-/* 2. Lightbox Modal 全屏弹窗：彻底死锁 iOS 的竖屏渲染 */
+    /* Lightbox Modal 全屏弹窗：死锁手机端竖屏/横屏渲染 */
     .lightbox-modal {
       display: none;
       position: fixed;
@@ -323,7 +324,6 @@
       justify-content: center;
     }
 
-    /* 无论横屏竖屏，视频/图片绝不溢出、绝不拉伸变形 */
     .lightbox-media { 
       max-width: 100% !important; 
       max-height: 100% !important; 
@@ -332,16 +332,18 @@
       object-fit: contain !important;
       border-radius: 6px;
       outline: none;
-      /* 强制开启 GPU 渲染隔离，防止 iOS 渲染引擎算出奇葩尺寸 */
       transform: translateZ(0); 
     }
+
     .lightbox-footer { 
       color: #fff; 
       text-align: center; 
       max-width: 800px;
       width: 100%;
       padding: 8px;
+      margin: 0 auto;
     }
+
     .lightbox-close { 
       position: absolute; 
       top: 16px; 
@@ -353,7 +355,7 @@
       line-height: 1;
     }
 
-    /* 移动端响应式 Breakpoints */
+    /* 移动端响应式断点 */
     @media (max-width: 1200px) { 
       .photo-grid { column-count: 3; column-gap: 20px; }
       main { padding: 20px; }
@@ -452,7 +454,6 @@
   </div>
 
   <script>
-    // 控制单页载入数量，减少卡顿
     const PAGE_SIZE = 16;
     let rawPhotos = [];
     let filteredPhotos = [];
@@ -460,7 +461,7 @@
     let activeFilterType = 'all';
     let activeFilterValue = null;
 
-    // 移动端 Sidebar 抽屉控制
+    // 抽屉控制
     function toggleSidebar() {
       document.getElementById('sidebar').classList.toggle('open');
       document.getElementById('sidebarOverlay').classList.toggle('active');
@@ -481,14 +482,14 @@
         rawPhotos = data.map(item => ({
           ...item,
           url: (item.url || '').trim(),
-          thumbUrl: (item.thumbUrl || item.url || '').trim() // 降级机制：无缩略图时使用原图
+          thumbUrl: (item.thumbUrl || item.url || '').trim()
         }));
 
         buildMonthMenu();
         applyFilter();
       } catch (err) {
-        console.error('详细报错信息:', err);
-        document.getElementById('loadingSentinel').innerText = '❌ 加载 photos.json 失败，请检查文件路径或网络连接。';
+        console.error('详细报错:', err);
+        document.getElementById('loadingSentinel').innerText = '❌ 加载 photos.json 失败，请检查文件路径。';
       }
     }
 
@@ -552,7 +553,6 @@
         return matchFilter && matchSearch;
       });
 
-      // 默认按日期降序
       matches.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
 
       filteredPhotos = matches;
@@ -596,20 +596,18 @@
       sentinel.innerText = loadedCount >= filteredPhotos.length ? '已加载完毕' : '向上滑动加载更多...';
     }
 
-    // 6. 渲染卡片：完全使用轻量级 thumbUrl，去除 HTML 实时视频解码，极大提升流畅度
+    // 6. 渲染卡片：极轻量 WebP 缩略图渲染
     function createCard(item) {
       const card = document.createElement('div');
       card.className = 'photo-card';
 
       const rawUrl = (item.url || '').trim();
-      // 优先取极轻量的 WebP 缩略图
       const displayThumb = item.thumbUrl; 
-      const isVideo = item.type === 'video' || rawUrl.endsWith('.webm') || rawUrl.endsWith('.mp4');
+      const isVideo = item.type === 'video' || rawUrl.toLowerCase().endsWith('.mp4');
 
       let mediaContent = '';
 
       if (isVideo) {
-        // 视频：同样用 <img> 载入截好的静态首帧 WebP 缩略图，右上角贴标
         mediaContent = `
           <div class="media-wrapper">
             <div class="video-badge">▶ 视频</div>
@@ -624,7 +622,6 @@
         `;
       }
 
-      // 保持底部的元数据展示：标题、年龄、时间
       const titleText = item.title ? item.title : (isVideo ? '精彩视频' : '欢楽瞬间');
       const ageText = item.age ? ` (${item.age})` : '';
       const dateText = item.date ? item.date : '';
@@ -639,38 +636,37 @@
         </div>
       `;
 
-      // 点击卡片，Modal 加载高清原画/原视频 (item.url)
       card.onclick = () => openLightbox(item);
       return card;
     }
 
-    // 7. 打开 Modal 查看大图/播放高清原视频
+    // 7. 打开 Modal：手机端 iOS Safari 极速硬件加速播放方案
     function openLightbox(item) {
       const mediaContainer = document.getElementById('lightboxMedia');
       const cleanUrl = (item.url || '').trim();
-      const isVideo = item.type === 'video' || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.mp4');
+      const isVideo = item.type === 'video' || cleanUrl.toLowerCase().endsWith('.mp4');
 
       if (isVideo) {
-        // 渲染视频：绝对定位居中 + 去除会导致 iOS 冲突的 crossorigin 属性
+        // iOS 必备：playsinline, webkit-playsinline 防止强行全屏；preload="metadata" 减少带宽占用
         mediaContainer.innerHTML = `
           <video id="activeVideo" class="lightbox-media" controls playsinline webkit-playsinline="true" preload="metadata">
-            <source src="${cleanUrl}" type="${cleanUrl.endsWith('.webm') ? 'video/webm' : 'video/mp4'}">
+            <source src="${cleanUrl}" type="video/mp4">
             您的浏览器不支持该视频格式。
           </video>
         `;
 
-        // 稍微延迟 50ms 触发播放，留出 DOM 布局和 GPU 初始化时间
+        // 异步安全播放逻辑：兼容手机端限制自动播放策略
         setTimeout(() => {
           const videoElem = document.getElementById('activeVideo');
           if (videoElem) {
             const playPromise = videoElem.play();
             if (playPromise !== undefined) {
               playPromise.catch(error => {
-                console.warn("iOS 限制带声音自动播放，等待用户手动点击:", error);
+                console.warn("手机端的安全策略阻止了自动播放，等待用户点击播放:", error);
               });
             }
           }
-        }, 50);
+        }, 100);
 
       } else {
         mediaContainer.innerHTML = `<img class="lightbox-media" src="${cleanUrl}" referrerpolicy="no-referrer">`;
@@ -683,20 +679,19 @@
       document.getElementById('lightbox').classList.add('active');
     }
 
-    // 🛠️ 关键修复：关闭 Modal 时彻底销毁视频，防止后台继续发声/占用内存
+    // 关闭 Modal：彻底强行销毁视频连接，释放内存
     function closeLightbox() {
       const modal = document.getElementById('lightbox');
       const mediaContainer = document.getElementById('lightboxMedia');
       
-      // 如果 Modal 里有正在播放的视频，强制暂停并摧毁连接
       const video = mediaContainer.querySelector('video');
       if (video) {
         video.pause();
         video.src = '';
-        video.load(); // 强行让浏览器释放视频资源
+        video.load();
       }
       
-      mediaContainer.innerHTML = ''; // 清空容器
+      mediaContainer.innerHTML = '';
       modal.classList.remove('active');
     }
 
