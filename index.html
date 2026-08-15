@@ -42,104 +42,331 @@
       gap: 16px;
     }
 
-    .header-left { display: flex; align-items: center; gap: 12px; }
-    .menu-toggle { display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--text-secondary); padding: 4px; }
-    .logo-group { display: flex; align-items: center; gap: 10px; cursor: pointer; white-space: nowrap; }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--text-secondary);
+      padding: 4px;
+    }
+
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
     .logo-icon { width: 28px; height: 28px; flex-shrink: 0; }
     .logo-text { font-size: 1.15rem; font-weight: 500; color: #3c4043; }
 
-    .search-container { flex: 1; max-width: 560px; position: relative; }
-    .search-box {
-      width: 100%; padding: 9px 16px 9px 40px; background: #f1f3f4; border: 1px solid transparent; border-radius: 24px; font-size: 0.9rem; outline: none; transition: all 0.2s;
+    .search-container {
+      flex: 1;
+      max-width: 560px;
+      position: relative;
     }
-    .search-box:focus { background: #fff; border-color: var(--border-color); box-shadow: 0 1px 6px rgba(32,33,36,0.2); }
-    .search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); fill: var(--text-secondary); width: 18px; height: 18px; }
+
+    .search-box {
+      width: 100%;
+      padding: 9px 16px 9px 40px;
+      background: #f1f3f4;
+      border: 1px solid transparent;
+      border-radius: 24px;
+      font-size: 0.9rem;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .search-box:focus {
+      background: #fff;
+      border-color: var(--border-color);
+      box-shadow: 0 1px 6px rgba(32,33,36,0.2);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      fill: var(--text-secondary);
+      width: 18px;
+      height: 18px;
+    }
 
     /* 主布局 */
-    .app-layout { display: flex; flex: 1; height: calc(100vh - 64px); overflow: hidden; position: relative; }
-    .sidebar-overlay { display: none; position: fixed; top: 64px; left: 0; width: 100vw; height: calc(100vh - 64px); background: rgba(0,0,0,0.4); z-index: 80; }
+    .app-layout {
+      display: flex;
+      flex: 1;
+      height: calc(100vh - 64px);
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* 遮罩层 (移动端 Sidebar 打开时) */
+    .sidebar-overlay {
+      display: none;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      width: 100vw;
+      height: calc(100vh - 64px);
+      background: rgba(0,0,0,0.4);
+      z-index: 80;
+    }
     .sidebar-overlay.active { display: block; }
 
     /* 侧边栏 Sidebar */
     aside {
-      width: 240px; background: var(--sidebar-bg); border-right: 1px solid var(--border-color); overflow-y: auto; padding: 16px 12px; display: flex; flex-direction: column; gap: 16px; flex-shrink: 0; user-select: none; transition: transform 0.25s ease-in-out; z-index: 90;
+      width: 240px;
+      background: var(--sidebar-bg);
+      border-right: 1px solid var(--border-color);
+      overflow-y: auto;
+      padding: 16px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      flex-shrink: 0;
+      user-select: none;
+      transition: transform 0.25s ease-in-out;
+      z-index: 90;
     }
-    .sidebar-section-title { font-size: 0.75rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.5px; margin: 8px 0 4px 12px; }
-    .sidebar-menu { display: flex; flex-direction: column; gap: 2px; }
+
+    .sidebar-section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 8px 0 4px 12px;
+    }
+
+    .sidebar-menu {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
     .sidebar-btn {
-      display: flex; align-items: center; gap: 12px; padding: 10px 16px; border-radius: 20px; border: none; background: transparent; color: var(--text-primary); font-size: 0.9rem; cursor: pointer; text-align: left; width: 100%; transition: background 0.15s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 16px;
+      border-radius: 20px;
+      border: none;
+      background: transparent;
+      color: var(--text-primary);
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-align: left;
+      width: 100%;
+      transition: background 0.15s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
+
     .sidebar-btn:hover { background: #f1f3f4; }
-    .sidebar-btn.active { background: #e8f0fe; color: var(--google-blue); font-weight: 500; }
-    .sidebar-btn.sub-item { padding-left: 32px; font-size: 0.85rem; }
+    .sidebar-btn.active {
+      background: #e8f0fe;
+      color: var(--google-blue);
+      font-weight: 500;
+    }
+
+    .sidebar-btn.sub-item {
+      padding-left: 32px;
+      font-size: 0.85rem;
+    }
 
     /* 主展示区 Main */
-    main { flex: 1; overflow-y: auto; padding: 24px 32px; position: relative; }
+    main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 24px 32px;
+      position: relative;
+    }
+
     .month-group { margin-bottom: 36px; }
-    .month-header { font-size: 1.05rem; font-weight: 500; color: var(--text-primary); margin-bottom: 16px; position: sticky; top: -24px; background: var(--google-bg); padding: 10px 0; z-index: 10; }
+    .month-header {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      position: sticky;
+      top: -24px;
+      background: var(--google-bg);
+      padding: 10px 0;
+      z-index: 10;
+    }
 
     /* 瀑布流网格 */
-    .photo-grid { column-count: 4; column-gap: 24px; }
+    .photo-grid {
+      column-count: 4;
+      column-gap: 24px;
+    }
+
     .photo-card {
-      break-inside: avoid; margin-bottom: 24px; position: relative; background: #ffffff; border-radius: var(--card-radius); overflow: hidden; cursor: pointer; border: 1px solid #f0f0f0; box-shadow: 0 1px 4px rgba(0,0,0,0.04); transition: transform 0.2s, box-shadow 0.2s;
+      break-inside: avoid;
+      margin-bottom: 24px;
+      position: relative;
+      background: #ffffff;
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      cursor: pointer;
+      border: 1px solid #f0f0f0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+      transition: transform 0.2s, box-shadow 0.2s;
     }
-    .photo-card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,0.1); }
 
-    /* 目标2实现：列表预览图跟随视频真实宽高比，防止横竖屏拉伸 */
-    .media-wrapper { position: relative; width: 100%; background: #000; overflow: hidden; display: block; }
-    .photo-card img { width: 100%; height: auto; display: block; object-fit: contain; }
-
-    /* 视频标识角标 */
-    .video-badge {
-      position: absolute; top: 10px; right: 10px; background: rgba(0, 0, 0, 0.65); color: #fff; padding: 4px 8px; border-radius: 6px; font-size: 11px; pointer-events: none; backdrop-filter: blur(4px); z-index: 2;
+    .photo-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
-    .card-meta-bar { padding: 10px 12px; background: #ffffff; }
-    .card-title-text { font-size: 0.85rem; font-weight: 500; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 3px; }
-    .card-sub-text { font-size: 0.78rem; color: var(--text-secondary); display: flex; align-items: center; gap: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .loading-sentinel { text-align: center; padding: 30px; color: var(--text-secondary); font-size: 0.85rem; }
-
-    /* 🛠️ Lightbox Modal 全屏弹窗：全面改用 Flex 布局，彻底抛弃 transform 居中定位 */
-    .lightbox-modal {
-      display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100dvh; background: rgba(0, 0, 0, 0.96); z-index: 1000; flex-direction: column; justify-content: space-between; padding: 16px; box-sizing: border-box;
-    }
-    .lightbox-modal.active { display: flex; }
-
-    /* 彻底修复：用纯 Flex 居中替代 absolute + transform，硬件渲染加速不再卡顿掉帧 */
-    .lightbox-body { 
-      position: relative; 
-      flex: 1; 
-      width: 100%; 
-      height: 100%; 
-      min-height: 0;
+    .media-wrapper {
+      position: relative;
+      width: 100%;
+      background: #f1f3f4;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    /* 统一用 img 展示静态缩略图（哪怕是视频也是显示 Python 提取的 WebP 首帧） */
+    .photo-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    /* 视频标识角标 */
+    .video-badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: rgba(0, 0, 0, 0.65);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      pointer-events: none;
+      backdrop-filter: blur(4px);
+      z-index: 2;
+    }
+
+    /* 缩略图下方信息栏（年龄/时间描述） */
+    .card-meta-bar {
+      padding: 10px 12px;
+      background: #ffffff;
+    }
+
+    .card-title-text {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 3px;
+    }
+
+    .card-sub-text {
+      font-size: 0.78rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .loading-sentinel {
+      text-align: center;
+      padding: 30px;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+    }
+
+    /* Lightbox 全屏 Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100vw; height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 1000;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+    }
+    .lightbox-modal.active { display: flex; }
+    .lightbox-body { 
+      flex: 1; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      width: 100%; 
       overflow: hidden;
     }
-
-    /* 目标1实现：消除渲染BUG，保持视频比例，开启原生流畅解码 */
     .lightbox-media { 
-      max-width: 100%; 
-      max-height: 100%; 
-      width: auto; 
-      height: auto;
+      max-width: 95vw; 
+      max-height: 80vh; 
+      border-radius: 4px; 
       object-fit: contain; 
-      border-radius: 6px; 
-      outline: none;
+    }
+    .lightbox-footer { 
+      color: #fff; 
+      text-align: center; 
+      max-width: 800px;
+      width: 100%;
+      padding: 8px;
+    }
+    .lightbox-close { 
+      position: absolute; 
+      top: 16px; 
+      right: 24px; 
+      color: #fff; 
+      font-size: 36px; 
+      cursor: pointer; 
+      z-index: 1010;
+      line-height: 1;
     }
 
-    .lightbox-footer { color: #fff; text-align: center; max-width: 800px; width: 100%; padding: 8px; margin: 0 auto; flex-shrink: 0; }
-    .lightbox-close { position: absolute; top: 16px; right: 24px; color: #fff; font-size: 36px; cursor: pointer; z-index: 1010; line-height: 1; }
-
-    /* 移动端响应式断点 */
-    @media (max-width: 1200px) { .photo-grid { column-count: 3; column-gap: 20px; } main { padding: 20px; } }
-    @media (max-width: 850px) { .photo-grid { column-count: 2; column-gap: 16px; } .photo-card { margin-bottom: 16px; } }
+    /* 移动端响应式 Breakpoints */
+    @media (max-width: 1200px) { 
+      .photo-grid { column-count: 3; column-gap: 20px; }
+      main { padding: 20px; }
+    }
+    @media (max-width: 850px) { 
+      .photo-grid { column-count: 2; column-gap: 16px; }
+      .photo-card { margin-bottom: 16px; }
+    }
     @media (max-width: 768px) {
-      .menu-toggle { display: block; } .logo-text { display: none; }
-      aside { position: absolute; top: 0; left: 0; height: 100%; transform: translateX(-100%); box-shadow: 2px 0 12px rgba(0,0,0,0.15); }
+      .menu-toggle { display: block; }
+      .logo-text { display: none; }
+      aside {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translateX(-100%);
+        box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+      }
       aside.open { transform: translateX(0); }
-      .photo-grid { column-count: 2; column-gap: 10px; } .photo-card { margin-bottom: 10px; } main { padding: 12px; }
+      .photo-grid { column-count: 2; column-gap: 10px; }
+      .photo-card { margin-bottom: 10px; }
+      main { padding: 12px; }
     }
   </style>
 </head>
@@ -215,6 +442,7 @@
   </div>
 
   <script>
+    // 控制单页载入数量，减少卡顿
     const PAGE_SIZE = 16;
     let rawPhotos = [];
     let filteredPhotos = [];
@@ -243,7 +471,7 @@
         rawPhotos = data.map(item => ({
           ...item,
           url: (item.url || '').trim(),
-          thumbUrl: (item.thumbUrl || item.url || '').trim()
+          thumbUrl: (item.thumbUrl || item.url || '').trim() // 降级机制：无缩略图时使用原图
         }));
 
         buildMonthMenu();
@@ -314,6 +542,7 @@
         return matchFilter && matchSearch;
       });
 
+      // 默认按日期降序
       matches.sort((a, b) => new Date(b.date || 0) - new Date(a.date || 0));
 
       filteredPhotos = matches;
@@ -357,18 +586,20 @@
       sentinel.innerText = loadedCount >= filteredPhotos.length ? '已加载完毕' : '向上滑动加载更多...';
     }
 
-    // 6. 渲染卡片：静态 WebP 首帧自适应宽高比
+    // 6. 渲染卡片：完全使用轻量级 thumbUrl，去除 HTML 实时视频解码，极大提升流畅度
     function createCard(item) {
       const card = document.createElement('div');
       card.className = 'photo-card';
 
       const rawUrl = (item.url || '').trim();
+      // 优先取极轻量的 WebP 缩略图
       const displayThumb = item.thumbUrl; 
       const isVideo = item.type === 'video' || rawUrl.endsWith('.webm') || rawUrl.endsWith('.mp4');
 
       let mediaContent = '';
 
       if (isVideo) {
+        // 视频：同样用 <img> 载入截好的静态首帧 WebP 缩略图，右上角贴标
         mediaContent = `
           <div class="media-wrapper">
             <div class="video-badge">▶ 视频</div>
@@ -383,6 +614,7 @@
         `;
       }
 
+      // 保持底部的元数据展示：标题、年龄、时间
       const titleText = item.title ? item.title : (isVideo ? '精彩视频' : '欢楽瞬间');
       const ageText = item.age ? ` (${item.age})` : '';
       const dateText = item.date ? item.date : '';
@@ -397,77 +629,74 @@
         </div>
       `;
 
+      // 点击卡片，Modal 加载高清原画/原视频 (item.url)
       card.onclick = () => openLightbox(item);
       return card;
     }
 
-    // 7. 打开 Modal：采用兼容性最佳的原生视频容器设置
-    function openLightbox(item) {
-      const mediaContainer = document.getElementById('lightboxMedia');
-      const cleanUrl = (item.url || '').trim();
-      const isVideo = item.type === 'video' || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.mp4');
+    // 7. 打开 Modal 查看大图/播放高清原视频
+// 7. 打开 Modal 查看大图/播放高清原视频（修复 Safari/iOS 播放卡顿与暂停问题）
+function openLightbox(item) {
+  const mediaContainer = document.getElementById('lightboxMedia');
+  const cleanUrl = (item.url || '').trim();
+  const isVideo = item.type === 'video' || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.mp4');
 
-      if (isVideo) {
-        // 关键改动：优化属性并使用单 source，杜绝预加载卡死
-        mediaContainer.innerHTML = `
-          <video id="activeVideo" class="lightbox-media" controls playsinline webkit-playsinline="true" preload="metadata">
-            <source src="${cleanUrl}" type="video/webm">
-            您的浏览器不支持该视频格式。
-          </video>
-        `;
+  if (isVideo) {
+    // 强制使用原生 video 结构，加 preload="auto" 和 crossOrigin
+    mediaContainer.innerHTML = `
+      <video id="activeVideo" class="lightbox-media" controls playsinline preload="auto" crossorigin="anonymous">
+        <source src="${cleanUrl}" type="${cleanUrl.endsWith('.webm') ? 'video/webm' : 'video/mp4'}">
+        您的浏览器不支持该视频格式。
+      </video>
+    `;
 
-        const video = document.getElementById('activeVideo');
-
-        video.addEventListener('loadedmetadata', () => {
-          const vw = video.videoWidth;
-          const vh = video.videoHeight;
-
-          if (!vw || !vh) return;
-
-          const ratio = vw / vh;
-
-          video.style.maxWidth = '95vw';
-          video.style.maxHeight = '85vh';
-
-          if (ratio < 1) {
-            video.style.width = 'auto';
-            video.style.height = '85vh';
-          } else {
-            video.style.width = '95vw';
-            video.style.height = 'auto';
-          }
+    // 显式用 JS 触发播放，并捕获自动播放被限制的异常
+    const videoElem = document.getElementById('activeVideo');
+    if (videoElem) {
+      const playPromise = videoElem.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.warn("自动播放被浏览器拦截，降级为等待用户手动点击播放:", error);
+          // 如果带声音自动播放被拦截，取消 autoplay，让用户手动点播放键
+          videoElem.controls = true;
         });
-      } else {
-        mediaContainer.innerHTML = `<img class="lightbox-media" src="${cleanUrl}" referrerpolicy="no-referrer">`;
       }
-
-      document.getElementById('lightboxTitle').innerText = item.title || '无标题';
-      document.getElementById('lightboxMeta').innerText = `拍摄时间: ${item.date || '未知'} ${item.age ? '| 年龄: ' + item.age : ''} ${item.location ? '| 地点: ' + item.location : ''}`;
-      document.getElementById('lightboxNotes').innerText = item.notes ? `📝 ${item.notes}` : '';
-
-      document.getElementById('lightbox').classList.add('active');
     }
+  } else {
+    // 加载高清原图
+    mediaContainer.innerHTML = `<img class="lightbox-media" src="${cleanUrl}" referrerpolicy="no-referrer">`;
+  }
 
-    // 关闭 Modal 并清空视频资源，防止后台继续占 CPU
+  document.getElementById('lightboxTitle').innerText = item.title || '无标题';
+  document.getElementById('lightboxMeta').innerText = `拍摄时间: ${item.date || '未知'} ${item.age ? '| 年龄: ' + item.age : ''} ${item.location ? '| 地点: ' + item.location : ''}`;
+  document.getElementById('lightboxNotes').innerText = item.notes ? `📝 ${item.notes}` : '';
+
+  document.getElementById('lightbox').classList.add('active');
+}
+
+    // 🛠️ 关键修复：关闭 Modal 时彻底销毁视频，防止后台继续发声/占用内存
     function closeLightbox() {
       const modal = document.getElementById('lightbox');
       const mediaContainer = document.getElementById('lightboxMedia');
       
+      // 如果 Modal 里有正在播放的视频，强制暂停并摧毁连接
       const video = mediaContainer.querySelector('video');
       if (video) {
         video.pause();
-        video.removeAttribute('src');
-        video.load();
+        video.src = '';
+        video.load(); // 强行让浏览器释放视频资源
       }
       
-      mediaContainer.innerHTML = '';
+      mediaContainer.innerHTML = ''; // 清空容器
       modal.classList.remove('active');
     }
 
+    // 支持 ESC 键关闭 Modal
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeLightbox();
     });
 
+    // 8. 滚动监听
     const observer = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) loadMore();
     }, { root: document.getElementById('mainScrollArea'), rootMargin: '200px' });
