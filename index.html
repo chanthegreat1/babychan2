@@ -231,20 +231,18 @@
       box-shadow: 0 6px 16px rgba(0,0,0,0.1);
     }
 
+/* 1. 瀑布流卡片媒体容器：不再限制固定比例，完全由图片/视频原始尺寸决定 */
     .media-wrapper {
       position: relative;
       width: 100%;
-      background: #f1f3f4;
+      background: #111111; /* 统一深色底，防闪烁 */
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: block;
     }
 
-    /* 统一用 img 展示静态缩略图（哪怕是视频也是显示 Python 提取的 WebP 首帧） */
     .photo-card img {
       width: 100%;
-      height: auto;
+      height: auto; /* 核心：让竖屏缩略图自然拉长，横屏缩略图保持横向 */
       display: block;
       object-fit: contain;
     }
@@ -298,32 +296,44 @@
       font-size: 0.85rem;
     }
 
-    /* Lightbox 全屏 Modal */
+/* 2. Lightbox Modal 全屏弹窗：彻底死锁 iOS 的竖屏渲染 */
     .lightbox-modal {
       display: none;
       position: fixed;
-      top: 0; left: 0; width: 100vw; height: 100vh;
+      top: 0; left: 0; 
+      width: 100vw; 
+      height: 100dvh;
       background: rgba(0, 0, 0, 0.95);
       z-index: 1000;
       flex-direction: column;
       justify-content: space-between;
-      align-items: center;
-      padding: 20px;
+      padding: 16px;
+      box-sizing: border-box;
     }
     .lightbox-modal.active { display: flex; }
+
     .lightbox-body { 
+      position: relative;
       flex: 1; 
-      display: flex; 
-      align-items: center; 
-      justify-content: center; 
-      width: 100%; 
+      width: 100%;
+      height: 100%;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+
+    /* 无论横屏竖屏，视频/图片绝不溢出、绝不拉伸变形 */
     .lightbox-media { 
-      max-width: 95vw; 
-      max-height: 80vh; 
-      border-radius: 4px; 
-      object-fit: contain; 
+      max-width: 100% !important; 
+      max-height: 100% !important; 
+      width: auto !important;
+      height: auto !important;
+      object-fit: contain !important;
+      border-radius: 6px;
+      outline: none;
+      /* 强制开启 GPU 渲染隔离，防止 iOS 渲染引擎算出奇葩尺寸 */
+      transform: translateZ(0); 
     }
     .lightbox-footer { 
       color: #fff; 
@@ -635,44 +645,43 @@
     }
 
     // 7. 打开 Modal 查看大图/播放高清原视频
-// 7. 打开 Modal 查看大图/播放高清原视频（修复 Safari/iOS 播放卡顿与暂停问题）
-function openLightbox(item) {
-  const mediaContainer = document.getElementById('lightboxMedia');
-  const cleanUrl = (item.url || '').trim();
-  const isVideo = item.type === 'video' || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.mp4');
+    function openLightbox(item) {
+      const mediaContainer = document.getElementById('lightboxMedia');
+      const cleanUrl = (item.url || '').trim();
+      const isVideo = item.type === 'video' || cleanUrl.endsWith('.webm') || cleanUrl.endsWith('.mp4');
 
-  if (isVideo) {
-    // 强制使用原生 video 结构，加 preload="auto" 和 crossOrigin
-    mediaContainer.innerHTML = `
-      <video id="activeVideo" class="lightbox-media" controls playsinline preload="auto" crossorigin="anonymous">
-        <source src="${cleanUrl}" type="${cleanUrl.endsWith('.webm') ? 'video/webm' : 'video/mp4'}">
-        您的浏览器不支持该视频格式。
-      </video>
-    `;
+      if (isVideo) {
+        // 渲染视频：绝对定位居中 + 去除会导致 iOS 冲突的 crossorigin 属性
+        mediaContainer.innerHTML = `
+          <video id="activeVideo" class="lightbox-media" controls playsinline webkit-playsinline="true" preload="metadata">
+            <source src="${cleanUrl}" type="${cleanUrl.endsWith('.webm') ? 'video/webm' : 'video/mp4'}">
+            您的浏览器不支持该视频格式。
+          </video>
+        `;
 
-    // 显式用 JS 触发播放，并捕获自动播放被限制的异常
-    const videoElem = document.getElementById('activeVideo');
-    if (videoElem) {
-      const playPromise = videoElem.play();
-      if (playPromise !== undefined) {
-        playPromise.catch(error => {
-          console.warn("自动播放被浏览器拦截，降级为等待用户手动点击播放:", error);
-          // 如果带声音自动播放被拦截，取消 autoplay，让用户手动点播放键
-          videoElem.controls = true;
-        });
+        // 稍微延迟 50ms 触发播放，留出 DOM 布局和 GPU 初始化时间
+        setTimeout(() => {
+          const videoElem = document.getElementById('activeVideo');
+          if (videoElem) {
+            const playPromise = videoElem.play();
+            if (playPromise !== undefined) {
+              playPromise.catch(error => {
+                console.warn("iOS 限制带声音自动播放，等待用户手动点击:", error);
+              });
+            }
+          }
+        }, 50);
+
+      } else {
+        mediaContainer.innerHTML = `<img class="lightbox-media" src="${cleanUrl}" referrerpolicy="no-referrer">`;
       }
+
+      document.getElementById('lightboxTitle').innerText = item.title || '无标题';
+      document.getElementById('lightboxMeta').innerText = `拍摄时间: ${item.date || '未知'} ${item.age ? '| 年龄: ' + item.age : ''} ${item.location ? '| 地点: ' + item.location : ''}`;
+      document.getElementById('lightboxNotes').innerText = item.notes ? `📝 ${item.notes}` : '';
+
+      document.getElementById('lightbox').classList.add('active');
     }
-  } else {
-    // 加载高清原图
-    mediaContainer.innerHTML = `<img class="lightbox-media" src="${cleanUrl}" referrerpolicy="no-referrer">`;
-  }
-
-  document.getElementById('lightboxTitle').innerText = item.title || '无标题';
-  document.getElementById('lightboxMeta').innerText = `拍摄时间: ${item.date || '未知'} ${item.age ? '| 年龄: ' + item.age : ''} ${item.location ? '| 地点: ' + item.location : ''}`;
-  document.getElementById('lightboxNotes').innerText = item.notes ? `📝 ${item.notes}` : '';
-
-  document.getElementById('lightbox').classList.add('active');
-}
 
     // 🛠️ 关键修复：关闭 Modal 时彻底销毁视频，防止后台继续发声/占用内存
     function closeLightbox() {
